@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ভাউলাগঞ্জ বিজ্ঞান স্কুল এন্ড কলেজ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kalpurush&family=Hind+Siliguri:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Hind Siliguri', 'Kalpurush', sans-serif; background-color: #f3f4f6; }
+    .tab-active { border-bottom: 3px solid #1d4ed8; color: #1d4ed8; font-weight: 600; }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- HEADER SECTION -->
+  <header class="bg-blue-900 text-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
+      <div class="flex items-center space-x-3 space-x-reverse">
+        <div class="bg-white p-2 rounded-full text-blue-900 font-bold text-xl w-12 h-12 flex items-center justify-center shadow">
+          <i class="fa-solid font-bold fa-school"></i>
+        </div>
+        <div>
+          <h1 class="text-xl md:text-2xl font-bold tracking-wide">ভাউলাগঞ্জ বিজ্ঞান স্কুল এন্ড কলেজ</h1>
+          <p class="text-xs md:text-sm text-blue-200"><i class="fa-solid fa-location-dot mr-1"></i> ভাউলাগঞ্জ, দেবীগঞ্জ, পঞ্চগড় | <i class="fa-solid fa-phone ml-2 mr-1"></i> ০১৭৩৭-১৮৮২৫২</p>
+        </div>
+      </div>
+
+      <nav class="mt-3 md:mt-0 flex items-center space-x-2 space-x-reverse text-sm font-semibold">
+        <button onclick="showSection('home')" class="hover:bg-blue-800 px-3 py-1.5 rounded transition"><i class="fa-solid fa-house mr-1"></i> হোম</button>
+        <button onclick="showSection('teachers')" class="hover:bg-blue-800 px-3 py-1.5 rounded transition"><i class="fa-solid fa-chalkboard-user mr-1"></i> শিক্ষকবৃন্দ</button>
+        <button onclick="showSection('notices')" class="hover:bg-blue-800 px-3 py-1.5 rounded transition"><i class="fa-solid fa-bullhorn mr-1"></i> নোটিশ বোর্ড</button>
+        <button onclick="showSection('results')" class="hover:bg-blue-800 px-3 py-1.5 rounded transition bg-yellow-500 text-blue-950 font-bold shadow"><i class="fa-solid fa-square-poll-vertical mr-1"></i> ফলাফল পোর্টাল</button>
+        <div id="authNav">
+          <button onclick="showSection('login')" class="bg-green-600 hover:bg-green-700 px-4 py-1.5 rounded shadow transition"><i class="fa-solid fa-right-to-bracket mr-1"></i> লগইন</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="flex-grow container mx-auto px-4 py-6">
+
+    <!-- HOME SECTION -->
+    <section id="sec-home" class="space-y-6">
+      <div class="bg-white rounded-xl shadow-md p-6 md:p-8 border-l-8 border-blue-800 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-3 md:w-2/3">
+          <span class="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-xs">স্বাগতম</span>
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800">ভাউলাগঞ্জ বিজ্ঞান স্কুল এন্ড কলেজ ডিজিটাল পোর্টালে স্বাগতম</h2>
+          <p class="text-gray-650 leading-relaxed text-sm md:text-base">
+            আমাদের প্রতিষ্ঠানের শিক্ষার্থীদের একাডেমিক তথ্য, উপস্থিতি এবং সকল পরীক্ষার ফলাফল অনলাইনে নিশ্চিত করার লক্ষ্যে এই ডিজিটাল সিস্টেম প্রস্তুত করা হয়েছে। সকল অভিভাবক, শিক্ষার্থী ও শিক্ষক সহজে তথ্য আদান-প্রদান করতে পারবেন।
+          </p>
+        </div>
+        <div class="md:w-1/3 flex justify-center">
+          <div class="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-2xl border border-blue-200 text-center w-full">
+            <i class="fa-solid fa-graduation-cap text-5xl text-blue-800 mb-3"></i>
+            <h3 class="font-bold text-gray-800">অনলাইন ফলাফল অনুসন্ধান</h3>
+            <p class="text-xs text-gray-600 mb-4 mt-1">অর্ধ-বার্ষিক, বৃত্তি ও এসএসসি মডেল টেস্ট পরীক্ষার রেজাল্ট দেখতে ক্লিক করুন</p>
+            <button onclick="showSection('results')" class="w-full bg-blue-800 text-white font-bold py-2 rounded-lg hover:bg-blue-900 shadow">ফলাফল দেখুন</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-5 rounded-xl shadow border border-gray-100 md:col-span-2">
+          <div class="flex justify-between items-center mb-4 pb-2 border-b">
+            <h3 class="font-bold text-lg text-gray-800"><i class="fa-solid fa-bell text-yellow-500 mr-2"></i>সাম্প্রতিক নোটিশ</h3>
+            <button onclick="showSection('notices')" class="text-blue-700 text-xs font-semibold hover:underline">সবগুলো দেখুন →</button>
+          </div>
+          <div id="homeNoticeList" class="space-y-3"></div>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl shadow border border-gray-100 space-y-4">
+          <h3 class="font-bold text-lg text-gray-800 pb-2 border-b"><i class="fa-solid fa-circle-info text-blue-600 mr-2"></i>জরুরি যোগাযোগ</h3>
+          <div class="text-sm space-y-2 text-gray-700">
+            <p><i class="fa-solid fa-building text-gray-500 w-5"></i> <strong>প্রতিষ্ঠান:</strong> ভাউলাগঞ্জ বিজ্ঞান স্কুল এন্ড কলেজ</p>
+            <p><i class="fa-solid fa-map-pin text-gray-500 w-5"></i> <strong>ঠিকানা:</strong> ভাউলাগঞ্জ, দেবীগঞ্জ, পঞ্চগড়</p>
+            <p><i class="fa-solid fa-phone text-gray-500 w-5"></i> <strong>মোবাইল:</strong> ০১৭৩৭-১৮৮২৫২</p>
+            <p><i class="fa-solid fa-clock text-gray-500 w-5"></i> <strong>সময়সূচি:</strong> সকাল ৯:০০ - বিকাল ৪:০০</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEACHERS PUBLIC SECTION (WITH SCHOOL & COLLEGE FILTER TABS) -->
+    <section id="sec-teachers" class="hidden space-y-6">
+      <div class="bg-white p-6 rounded-xl shadow space-y-4">
+        <div class="flex flex-col md:flex-row md:items-center justify-between border-b pb-3 gap-3">
+          <div>
+            <h2 class="text-xl font-bold text-gray-800"><i class="fa-solid fa-chalkboard-user text-blue-800 mr-2"></i>আমাদের সম্মানিত শিক্ষকবৃন্দ</h2>
+            <p class="text-xs text-gray-500">প্রতিষ্ঠানটির বিদ্যালয় ও কলেজ শাখার অভিজ্ঞ শিক্ষকগণের পরিচিতি।</p>
+          </div>
+          <!-- Section Selector Tabs -->
+          <div class="flex bg-gray-100 p-1 rounded-lg border">
+            <button onclick="filterPublicTeachers('school')" id="btnTeacherSchool" class="px-4 py-1.5 text-xs font-bold rounded-md bg-blue-800 text-white shadow">স্কুল সেকশন</button>
+            <button onclick="filterPublicTeachers('college')" id="btnTeacherCollege" class="px-4 py-1.5 text-xs font-bold rounded-md text-gray-600 hover:text-gray-900">কলেজ সেকশন</button>
+          </div>
+        </div>
+        
+        <div id="publicTeachersGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pt-2"></div>
+      </div>
+    </section>
+
+    <!-- NOTICES SECTION -->
+    <section id="sec-notices" class="hidden space-y-4">
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h2 class="text-xl font-bold text-gray-800 border-b pb-3 mb-4"><i class="fa-solid fa-bullhorn text-blue-800 mr-2"></i>সকল নোটিশ</h2>
+        <div id="fullNoticeList" class="space-y-4"></div>
+      </div>
+    </section>
+
+    <!-- PUBLIC RESULTS PORTAL SECTION -->
+    <section id="sec-results" class="hidden space-y-6">
+      <div class="bg-white p-6 rounded-xl shadow space-y-4">
+        <h2 class="text-xl font-bold text-gray-800 border-b pb-2"><i class="fa-solid fa-square-poll-vertical text-blue-800 mr-2"></i>অনলাইন একাডেমিক ফলাফল পরীক্ষা (পাবলিক পোর্টাল)</h2>
+        <p class="text-xs text-gray-500">এখানে অর্ধবার্ষিক, বৃত্তি মডেল টেস্ট ও এসএসসি মডেল টেস্ট পরীক্ষার মেধা তালিকা দেখা যাবে।</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">পরীক্ষার বছর</label>
+            <select id="resYear" class="w-full border rounded p-2 text-sm">
+              <option value="2026">২০২৬</option>
+              <option value="2025">২০২৫</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">পরীক্ষার নাম</label>
+            <select id="resExam" onchange="handlePublicExamChange()" class="w-full border rounded p-2 text-sm">
+              <option value="অর্ধ-বার্ষিক পরীক্ষা">অর্ধ-বার্ষিক পরীক্ষা</option>
+              <option value="বৃত্তি মডেল টেস্ট">বৃত্তি মডেল টেস্ট</option>
+              <option value="এসএসসি মডেল টেস্ট">এসএসসি মডেল টেস্ট</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">শ্রেণি</label>
+            <select id="resClass" class="w-full border rounded p-2 text-sm">
+              <option value="">-- শ্রেণি সিলেক্ট করুন --</option>
+            </select>
+          </div>
+        </div>
+
+        <button onclick="searchPublicResults()" class="bg-blue-800 text-white font-bold px-6 py-2 rounded-lg hover:bg-blue-900 shadow">
+          <i class="fa-solid fa-magnifying-glass mr-1"></i> ফলাফল দেখুন
+        </button>
+      </div>
+
+      <div id="resultOutput" class="hidden bg-white p-6 rounded-xl shadow space-y-4">
+        <div class="flex justify-between items-center border-b pb-3">
+          <h3 id="resultTitle" class="font-bold text-lg text-gray-800"></h3>
+          <button onclick="window.print()" class="text-xs bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded"><i class="fa-solid fa-print mr-1"></i> প্রিন্ট</button>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm border-collapse">
+            <thead>
+              <tr class="bg-gray-100 text-gray-700 border-b">
+                <th class="p-3">মেধাক্রম</th>
+                <th class="p-3">রোল</th>
+                <th class="p-3">শিক্ষার্থীর নাম</th>
+                <th class="p-3">শাখা/বিভাগ</th>
+                <th class="p-3">মোট নম্বর</th>
+                <th class="p-3">জিপিএ (GPA)</th>
+                <th class="p-3">ফলাফল</th>
+              </tr>
+            </thead>
+            <tbody id="resultTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOGIN SECTION -->
+    <section id="sec-login" class="hidden max-w-md mx-auto my-10">
+      <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+        <div class="text-center mb-6">
+          <i class="fa-solid fa-user-lock text-4xl text-blue-800 mb-2"></i>
+          <h2 class="text-2xl font-bold text-gray-800">প্যানেল লগইন</h2>
+          <p class="text-xs text-gray-500 mt-1">শিক্ষক ও এডমিনের জন্য সংরক্ষিত এলাকা</p>
+        </div>
+
+        <form onsubmit="handleLogin(event)" class="space-y-4">
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">ইমেইল / আইডি</label>
+            <input type="email" id="loginEmail" required class="w-full border rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-blue-600 outline-none" placeholder="example@bhaulaganj.edu">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">পাসওয়ার্ড</label>
+            <div class="relative">
+              <input type="password" id="loginPass" required class="w-full border rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-blue-600 outline-none pr-10" placeholder="••••••••">
+              <button type="button" onclick="togglePassVisibility('loginPass')" class="absolute right-3 top-2.5 text-gray-500 hover:text-gray-700">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <button type="submit" class="w-full bg-blue-800 text-white font-bold py-2.5 rounded-lg hover:bg-blue-900 shadow-md">লগইন করুন</button>
+        </form>
+
+        <div class="mt-6 p-3 bg-gray-50 rounded-lg text-xs text-gray-600 border space-y-1">
+          <p class="font-bold text-gray-700 mb-1"><i class="fa-solid fa-key mr-1"></i> ডেমো লগইন অ্যাকাউন্টের বিবরণ:</p>
+          <div class="flex justify-between items-center bg-white p-1.5 rounded border">
+            <span>এডমিন: <code>admin@bhaulaganj.edu</code></span>
+            <button onclick="fillLogin('admin@bhaulaganj.edu','admin123')" class="text-blue-600 font-bold text-xs hover:underline">অটো-ফিল</button>
+          </div>
+          <div class="flex justify-between items-center bg-white p-1.5 rounded border">
+            <span>শিক্ষক: <code>teacher@bhaulaganj.edu</code></span>
+            <button onclick="fillLogin('teacher@bhaulaganj.edu','teacher123')" class="text-blue-600 font-bold text-xs hover:underline">অটো-ফিল</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DASHBOARD SECTION -->
+    <section id="sec-dashboard" class="hidden space-y-6">
+      
+      <!-- Top Profile Banner -->
+      <div class="bg-blue-900 text-white p-6 rounded-xl shadow flex flex-wrap justify-between items-center gap-4">
+        <div>
+          <span id="dashRoleBadge" class="bg-yellow-400 text-blue-950 text-xs font-extrabold px-2.5 py-1 rounded uppercase"></span>
+          <h2 id="dashUserName" class="text-xl font-bold mt-1"></h2>
+          <p id="dashUserEmail" class="text-xs text-blue-200"></p>
+        </div>
+        <button onclick="handleLogout()" class="bg-red-600 hover:bg-red-700 text-white text-xs font-bold px-4 py-2 rounded shadow">
+          <i class="fa-solid fa-right-from-bracket mr-1"></i> লগআউট
+        </button>
+      </div>
+
+      <!-- Dashboard Navigation Tabs -->
+      <div class="flex border-b border-gray-300 overflow-x-auto bg-white rounded-t-xl px-4 pt-2">
+        <button onclick="switchDashTab('students')" id="tab-students" class="px-4 py-3 text-sm font-bold tab-active"><i class="fa-solid fa-users mr-1"></i> শিক্ষার্থী পরিচালনা</button>
+        <button onclick="switchDashTab('marks')" id="tab-marks" class="px-4 py-3 text-sm font-bold text-gray-500"><i class="fa-solid fa-pen-to-square mr-1"></i> মার্কস ও রেজাল্ট এন্ট্রি</button>
+        <button onclick="switchDashTab('classTests')" id="tab-classTests" class="px-4 py-3 text-sm font-bold text-gray-500"><i class="fa-solid fa-list-check mr-1"></i> ক্লাসটেস্ট ফলাফল</button>
+        <button id="tab-admin-only" onclick="switchDashTab('adminControl')" class="px-4 py-3 text-sm font-bold text-gray-500 hidden"><i class="fa-solid fa-sliders mr-1"></i> শিক্ষক ও এডমিন কন্ট্রোল</button>
+        <button onclick="switchDashTab('password')" id="tab-password" class="px-4 py-3 text-sm font-bold text-gray-500"><i class="fa-solid fa-key mr-1"></i> প্রোফাইল ও পাসওয়ার্ড</button>
+      </div>
+
+      <!-- TAB 1: STUDENT MANAGEMENT -->
+      <div id="dash-content-students" class="bg-white p-6 rounded-b-xl shadow space-y-6">
+        <div class="flex flex-wrap justify-between items-center gap-4 border-b pb-4">
+          <h3 class="font-bold text-lg text-gray-800">শিক্ষার্থীদের তালিকা ও তথ্য এডিট</h3>
+          <button id="btnAddStudentBtn" onclick="openStudentModal()" class="bg-green-700 text-white text-xs font-bold px-4 py-2 rounded hover:bg-green-800 shadow">
+            <i class="fa-solid fa-user-plus mr-1"></i> নতুন শিক্ষার্থী যুক্ত করুন
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-gray-50 p-4 rounded-lg border">
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">শ্রেণি ফিল্টার</label>
+            <select id="filterClass" onchange="populateSectionDropdown('filterClass','filterSec'); renderStudentTable();" class="w-full border rounded p-2 text-sm">
+              <option value="">সকল শ্রেণি</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">শাখা/বিভাগ ফিল্টার</label>
+            <select id="filterSec" onchange="renderStudentTable()" class="w-full border rounded p-2 text-sm">
+              <option value="">সকল শাখা/বিভাগ</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">খুঁজুন (নাম/রোল)</label>
+            <input type="text" id="searchStudent" onkeyup="renderStudentTable()" placeholder="টাইপ করুন..." class="w-full border rounded p-2 text-sm">
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm border-collapse">
+            <thead>
+              <tr class="bg-gray-100 border-b text-gray-700">
+                <th class="p-3">রোল</th>
+                <th class="p-3">নাম</th>
+                <th class="p-3">শ্রেণি</th>
+                <th class="p-3">শাখা/বিভাগ</th>
+                <th class="p-3">ঐচ্ছিক বিষয়</th>
+                <th class="p-3">বৃত্তি পরীক্ষার্থী?</th>
+                <th class="p-3 text-center">অ্যাকশন</th>
+              </tr>
+            </thead>
+            <tbody id="studentTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TAB 2: MARKS & EXAM ENTRY -->
+      <div id="dash-content-marks" class="hidden bg-white p-6 rounded-b-xl shadow space-y-6">
+        <h3 class="font-bold text-lg text-gray-800 border-b pb-3"><i class="fa-solid fa-calculator text-blue-800 mr-1"></i> বিষয়ভিত্তিক পরীক্ষা নম্বর ইনপুট</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 bg-gray-50 p-4 rounded-lg border">
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">পরীক্ষার নাম</label>
+            <select id="markExamSelect" onchange="handleExamSelectChange()" class="w-full border rounded p-2 text-sm"></select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">শ্রেণি</label>
+            <select id="markClassSelect" onchange="populateSectionDropdown('markClassSelect','markSecSelect'); updateSubjectDropdownForClass();" class="w-full border rounded p-2 text-sm"></select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">শাখা/বিভাগ</label>
+            <select id="markSecSelect" class="w-full border rounded p-2 text-sm"></select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">বিষয় নির্বাচন করুন</label>
+            <select id="markSubjectSelect" onchange="handleSubjectChange()" class="w-full border rounded p-2 text-sm"></select>
+          </div>
+        </div>
+
+        <button onclick="loadStudentsForMarkEntry()" class="bg-blue-800 text-white font-bold px-5 py-2 rounded text-sm hover:bg-blue-900 shadow">
+          <i class="fa-solid fa-list mr-1"></i> শিক্ষার্থীর তালিকা লোড করুন
+        </button>
+
+        <div id="markEntryArea" class="hidden space-y-4 pt-4 border-t">
+          <div class="flex justify-between items-center bg-blue-50 p-3 rounded border border-blue-200">
+            <span id="markEntryHeader" class="font-bold text-sm text-blue-900"></span>
+            <span id="markTypeGuide" class="text-xs bg-white border px-2 py-1 rounded text-gray-600 font-semibold"></span>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm border-collapse">
+              <thead>
+                <tr class="bg-gray-100 border-b">
+                  <th class="p-3">রোল</th>
+                  <th class="p-3">শিক্ষার্থীর নাম</th>
+                  <th class="p-3 w-28" id="thPart1">১ম পত্র / MCQ</th>
+                  <th class="p-3 w-28" id="thPart2">২য় পত্র / CQ</th>
+                  <th class="p-3 w-28" id="thPractical">Practical</th>
+                  <th class="p-3">মোট নম্বর</th>
+                </tr>
+              </thead>
+              <tbody id="markEntryTableBody"></tbody>
+            </table>
+          </div>
+
+          <button onclick="saveAllMarks()" class="bg-green-700 hover:bg-green-800 text-white font-bold px-6 py-2.5 rounded shadow">
+            <i class="fa-solid fa-floppy-disk mr-1"></i> নম্বর সংরক্ষণ করুন (Save Marks)
+          </button>
+        </div>
+      </div>
+
+      <!-- TAB 3: CLASS TEST RECORDS -->
+      <div id="dash-content-classTests" class="hidden bg-white p-6 rounded-b-xl shadow space-y-6">
+        <div class="flex justify-between items-center border-b pb-3">
+          <div>
+            <h3 class="font-bold text-lg text-gray-800"><i class="fa-solid fa-clipboard-list text-blue-800 mr-1"></i> ক্লাসটেস্ট ফলাফল ও রেকর্ড</h3>
+            <p class="text-xs text-gray-500">শিক্ষকগণ কর্তৃক গৃহীত ক্লাসটেস্ট এর তালিকা ও ফলাফল এখান থেকে দেখা যাবে।</p>
+          </div>
+          <button onclick="openClassTestModal()" class="bg-indigo-700 hover:bg-indigo-800 text-white font-bold text-xs px-4 py-2 rounded shadow">
+            <i class="fa-solid fa-plus mr-1"></i> নতুন ক্লাসটেস্ট এন্ট্রি যুক্ত করুন
+          </button>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm border-collapse">
+            <thead>
+              <tr class="bg-gray-100 border-b text-gray-700">
+                <th class="p-3">তারিখ</th>
+                <th class="p-3">শ্রেণি ও শাখা</th>
+                <th class="p-3">বিষয়</th>
+                <th class="p-3">পরীক্ষার ধরন</th>
+                <th class="p-3">মোট নম্বর</th>
+                <th class="p-3 text-center">অ্যাকশন</th>
+              </tr>
+            </thead>
+            <tbody id="classTestTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TAB 4: ADMIN CONTROL -->
+      <div id="dash-content-adminControl" class="hidden bg-white p-6 rounded-b-xl shadow space-y-8">
+        
+        <!-- Manage Teachers -->
+        <div class="space-y-4">
+          <div class="flex justify-between items-center border-b pb-2">
+            <h3 class="font-bold text-lg text-gray-800"><i class="fa-solid fa-chalkboard-user text-blue-800 mr-1"></i> শিক্ষক ব্যবস্থাপনা (সংযুক্ত, এডিট ও ডিলিট)</h3>
+            <button onclick="openAddTeacherModal()" class="bg-green-700 text-white text-xs font-bold px-4 py-2 rounded hover:bg-green-800 shadow">
+              <i class="fa-solid fa-user-plus mr-1"></i> নতুন শিক্ষক যুক্ত করুন
+            </button>
+          </div>
+          
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm border-collapse">
+              <thead>
+                <tr class="bg-gray-100 border-b text-gray-700">
+                  <th class="p-3">নাম ও ছবি</th>
+                  <th class="p-3">ইমেইল (আইডি)</th>
+                  <th class="p-3">সেকশন</th>
+                  <th class="p-3">বিভাগ / পদবি</th>
+                  <th class="p-3">অনুমোদিত শ্রেণি, শাখা ও বিষয়</th>
+                  <th class="p-3 text-center">অ্যাকশন</th>
+                </tr>
+              </thead>
+              <tbody id="adminTeacherTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Manage Classes & Sections Rules -->
+        <div class="space-y-4 pt-4 border-t">
+          <h3 class="font-bold text-lg text-gray-800 border-b pb-2"><i class="fa-solid fa-sitemap text-blue-800 mr-1"></i> শ্রেণি ও শাখা নিয়ন্ত্রণ</h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+            <div>
+              <h4 class="font-bold text-sm text-gray-700 mb-2">শ্রেণি ও শাখাসমূহ</h4>
+              <ul id="classListGroup" class="space-y-2 text-sm"></ul>
+            </div>
+            <div class="bg-blue-50 p-4 rounded-lg border border-blue-200 space-y-3">
+              <h4 class="font-bold text-sm text-blue-900">৬ষ্ঠ থেকে ৮ম শ্রেণিতে নতুন শাখা যুক্ত করুন</h4>
+              <div>
+                <label class="block text-xs font-bold text-gray-700 mb-1">শ্রেণি বাছুন (৬ষ্ঠ, ৭ম, ৮ম)</label>
+                <select id="manualClassSelect" class="w-full border rounded p-2 text-sm">
+                  <option value="৬ষ্ঠ">৬ষ্ঠ</option>
+                  <option value="৭ম">৭ম</option>
+                  <option value="৮ম">৮ম</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-gray-700 mb-1">শাখার নাম ম্যানুয়ালি টাইপ করুন</label>
+                <input type="text" id="manualSecName" placeholder="যেমন: গ বা পদ্মা" class="w-full border rounded p-2 text-sm">
+              </div>
+              <button onclick="addManualSection()" class="bg-green-700 hover:bg-green-800 text-white font-bold text-xs px-4 py-2 rounded shadow">
+                <i class="fa-solid fa-plus mr-1"></i> শাখা যুক্ত করুন
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Admin Setup Official Exams -->
+        <div class="space-y-4 pt-4 border-t">
+          <h3 class="font-bold text-lg text-gray-800 border-b pb-2"><i class="fa-solid fa-calendar-check text-blue-800 mr-1"></i> প্রাতিষ্ঠানিক পরীক্ষা সেটআপ</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-gray-50 p-4 rounded-lg border">
+            <div>
+              <label class="block text-xs font-bold text-gray-700 mb-1">পরীক্ষার নাম</label>
+              <input type="text" id="adminExamName" placeholder="পরীক্ষার নাম" class="w-full border rounded p-2 text-sm">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-gray-700 mb-1">সাল</label>
+              <input type="text" id="adminExamYear" value="2026" class="w-full border rounded p-2 text-sm">
+            </div>
+            <div class="flex items-end">
+              <button onclick="addNewOfficialExam()" class="w-full bg-blue-800 text-white font-bold py-2 rounded text-sm hover:bg-blue-900 shadow">
+                <i class="fa-solid fa-plus mr-1"></i> পরীক্ষা চালু করুন
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TAB 5: PROFILE & PASSWORD CHANGE -->
+      <div id="dash-content-password" class="hidden bg-white p-6 rounded-b-xl shadow max-w-lg mx-auto my-4 border space-y-6">
+        <h3 class="font-bold text-lg text-gray-800 border-b pb-3"><i class="fa-solid fa-user-gear text-blue-800 mr-1"></i> শিক্ষক প্রোফাইল ও ছবি আপডেট</h3>
+        
+        <form onsubmit="handleProfileUpdate(event)" class="space-y-4">
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">আপনার ছবি (Image URL / Link)</label>
+            <input type="text" id="profImgUrl" placeholder="https://example.com/photo.jpg" class="w-full border rounded-lg p-2 text-sm">
+          </div>
+          <button type="submit" class="w-full bg-blue-800 text-white font-bold py-2 rounded-lg hover:bg-blue-900 shadow text-xs">
+            প্রোফাইল ছবি সেভ করুন
+          </button>
+        </form>
+
+        <hr>
+
+        <h3 class="font-bold text-lg text-gray-800 border-b pb-3"><i class="fa-solid fa-lock text-blue-800 mr-1"></i> পাসওয়ার্ড পরিবর্তন করুন</h3>
+        
+        <form onsubmit="handleChangePassword(event)" class="space-y-4">
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">বর্তমান পাসওয়ার্ড</label>
+            <div class="relative">
+              <input type="password" id="oldPass" required class="w-full border rounded-lg p-2 text-sm pr-10" placeholder="••••••••">
+              <button type="button" onclick="togglePassVisibility('oldPass')" class="absolute right-3 top-2.5 text-gray-500 hover:text-gray-700">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">নতুন পাসওয়ার্ড</label>
+            <div class="relative">
+              <input type="password" id="newPass" required class="w-full border rounded-lg p-2 text-sm pr-10" placeholder="••••••••">
+              <button type="button" onclick="togglePassVisibility('newPass')" class="absolute right-3 top-2.5 text-gray-500 hover:text-gray-700">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">নতুন পাসওয়ার্ড পুনরায় টাইপ করুন</label>
+            <div class="relative">
+              <input type="password" id="confirmPass" required class="w-full border rounded-lg p-2 text-sm pr-10" placeholder="••••••••">
+              <button type="button" onclick="togglePassVisibility('confirmPass')" class="absolute right-3 top-2.5 text-gray-500 hover:text-gray-700">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <button type="submit" class="w-full bg-green-700 text-white font-bold py-2.5 rounded-lg hover:bg-green-800 shadow text-xs">
+            পাসওয়ার্ড পরিবর্তন আপডেট করুন
+          </button>
+        </form>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- MODAL: ADD/EDIT STUDENT -->
+  <div id="modalStudent" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center p-4 z-50">
+    <div class="bg-white rounded-xl shadow-xl max-w-lg w-full p-6 space-y-4">
+      <div class="flex justify-between items-center border-b pb-2">
+        <h3 id="modalStudentTitle" class="font-bold text-gray-800">শিক্ষার্থীর তথ্য যুক্ত / সংশোধন</h3>
+        <button onclick="closeStudentModal()" class="text-gray-400 hover:text-gray-600"><i class="fa-solid fa-xmark text-xl"></i></button>
+      </div>
+      <form onsubmit="saveStudent(event)" class="space-y-3">
+        <input type="hidden" id="studId">
+        <div>
+          <label class="block text-xs font-bold text-gray-700 mb-1">শিক্ষার্থীর পূর্ণ নাম</label>
+          <input type="text" id="studName" required class="w-full border rounded p-2 text-sm">
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">শ্রেণি</label>
+            <select id="studClass" required onchange="populateSectionDropdown('studClass','studSec'); checkClassForExtras();" class="w-full border rounded p-2 text-sm"></select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">শাখা / বিভাগ</label>
+            <select id="studSec" required onchange="checkClassForExtras()" class="w-full border rounded p-2 text-sm"></select>
+          </div>
+        </div>
+
+        <div id="extraStudentFields" class="space-y-3 bg-gray-50 p-3 rounded border">
+          <div id="fieldHigherMath" class="hidden">
+            <label class="flex items-center space-x-2 space-x-reverse text-sm font-bold text-blue-900 cursor-pointer">
+              <input type="checkbox" id="studIsHigherMath" class="w-4 h-4">
+              <span>ঐচ্ছিক বিষয় উচ্চতর গণিত কি না? (চেক না দিলে 'কৃষি শিক্ষা' হবে)</span>
+            </label>
+          </div>
+
+          <div id="fieldScholarship" class="hidden">
+            <label class="flex items-center space-x-2 space-x-reverse text-sm font-bold text-blue-900 cursor-pointer">
+              <input type="checkbox" id="studScholarship" class="w-4 h-4">
+              <span>বৃত্তি পরীক্ষার্থী হিসেবে অন্তর্ভুক্ত করুন</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">রোল নম্বর</label>
+            <input type="number" id="studRoll" required class="w-full border rounded p-2 text-sm">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">রক্তের গ্রুপ</label>
+            <select id="studBlood" class="w-full border rounded p-2 text-sm">
+              <option value="অজানা">অজানা</option>
+              <option value="A+">A+</option><option value="A-">A-</option>
+              <option value="B+">B+</option><option value="B-">B-</option>
+              <option value="O+">O+</option><option value="O-">O-</option>
+              <option value="AB+">AB+</option><option value="AB-">AB-</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-gray-700 mb-1">অভিভাবকের মোবাইল নম্বর</label>
+          <input type="text" id="studPhone" required class="w-full border rounded p-2 text-sm" placeholder="017xxxxxxxx">
+        </div>
+        <div class="pt-2 flex justify-end space-x-2 space-x-reverse">
+          <button type="button" onclick="closeStudentModal()" class="px-4 py-2 border rounded text-xs font-bold text-gray-600">বাতিল</button>
+          <button type="submit" class="px-5 py-2 bg-blue-800 text-white rounded text-xs font-bold hover:bg-blue-900 shadow">সংরক্ষণ করুন</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: ADD / EDIT TEACHER (ADMIN) WITH COLLEGE SECTION CHECKBOX -->
+  <div id="modalTeacher" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center p-4 z-50">
+    <div class="bg-white rounded-xl shadow-xl max-w-xl w-full p-6 space-y-4">
+      <div class="flex justify-between items-center border-b pb-2">
+        <h3 id="modalTeacherTitle" class="font-bold text-gray-800">শিক্ষক যুক্ত / সংশোধন</h3>
+        <button onclick="closeTeacherModal()" class="text-gray-400 hover:text-gray-600"><i class="fa-solid fa-xmark text-xl"></i></button>
+      </div>
+      <form onsubmit="saveTeacherAdmin(event)" class="space-y-4">
+        <input type="hidden" id="tOriginalEmail">
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">শিক্ষকের নাম</label>
+            <input type="text" id="tName" required class="w-full border rounded p-2 text-sm">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">ইমেইল (লগইন আইডি)</label>
+            <input type="email" id="tEmail" required class="w-full border rounded p-2 text-sm">
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">পাসওয়ার্ড</label>
+            <input type="text" id="tPass" required class="w-full border rounded p-2 text-sm" placeholder="পাসওয়ার্ড">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">বিভাগ বা পদবি</label>
+            <input type="text" id="tDept" required class="w-full border rounded p-2 text-sm" placeholder="সহকারী শিক্ষক - বিজ্ঞান / প্রভাষক">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-gray-700 mb-1">ছবির লিংক (Image URL)</label>
+          <input type="text" id="tImage" class="w-full border rounded p-2 text-sm" placeholder="https://...">
+        </div>
+
+        <!-- NEW: COLLEGE SECTION CHECKBOX -->
+        <div class="bg-indigo-50 p-3 rounded-lg border border-indigo-200">
+          <label class="flex items-center space-x-2 space-x-reverse text-xs font-bold text-indigo-900 cursor-pointer">
+            <input type="checkbox" id="tIsCollege" class="w-4 h-4 text-indigo-600 rounded">
+            <span>তিনি কি কলেজ সেকশনের শিক্ষক? (চেক না দিলে স্বয়ংক্রিয়ভাবে 'স্কুল সেকশন' ধরা হবে)</span>
+          </label>
+        </div>
+
+        <div class="bg-blue-50 p-3 rounded-lg border border-blue-200 space-y-3">
+          <h4 class="font-bold text-xs text-blue-900 border-b border-blue-200 pb-1">শ্রেণি, শাখা ও বিষয় পারমিশন যোগ করুন</h4>
+          
+          <div class="grid grid-cols-3 gap-2">
+            <div>
+              <label class="block text-[10px] font-bold text-gray-700 mb-1">শ্রেণি বাছুন</label>
+              <select id="permClassSelect" onchange="onPermClassChange()" class="w-full border rounded p-1.5 text-xs bg-white"></select>
+            </div>
+            <div>
+              <label class="block text-[10px] font-bold text-gray-700 mb-1">শাখা / বিভাগ</label>
+              <select id="permSecSelect" class="w-full border rounded p-1.5 text-xs bg-white"></select>
+            </div>
+            <div>
+              <label class="block text-[10px] font-bold text-gray-700 mb-1">বিষয় বাছুন</label>
+              <select id="permSubjSelect" class="w-full border rounded p-1.5 text-xs bg-white"></select>
+            </div>
+          </div>
+
+          <button type="button" onclick="addTeacherPermissionRule()" class="bg-blue-800 text-white text-xs px-3 py-1.5 rounded font-bold hover:bg-blue-900 shadow">
+            <i class="fa-solid fa-plus mr-1"></i> পারমিশন রুল যুক্ত করুন
+          </button>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-gray-700 mb-1">শিক্ষকের বর্তমান পারমিশন তালিকা:</label>
+          <div id="teacherRuleList" class="space-y-1.5 max-h-36 overflow-y-auto border p-2 rounded bg-gray-50 text-xs"></div>
+        </div>
+
+        <div class="pt-2 flex justify-end space-x-2 space-x-reverse">
+          <button type="button" onclick="closeTeacherModal()" class="px-4 py-2 border rounded text-xs font-bold text-gray-600">বাতিল</button>
+          <button type="submit" class="px-5 py-2 bg-green-700 text-white rounded text-xs font-bold hover:bg-green-800 shadow">সংরক্ষণ করুন</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: CLASS TEST ENTRY -->
+  <div id="modalClassTest" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center p-4 z-50">
+    <div class="bg-white rounded-xl shadow-xl max-w-md w-full p-6 space-y-4">
+      <div class="flex justify-between items-center border-b pb-2">
+        <h3 class="font-bold text-gray-800">নতুন ক্লাসটেস্ট রেকর্ড তৈরি</h3>
+        <button onclick="closeClassTestModal()" class="text-gray-400 hover:text-gray-600"><i class="fa-solid fa-xmark text-xl"></i></button>
+      </div>
+      <form onsubmit="saveClassTestRecord(event)" class="space-y-3">
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">শ্রেণি</label>
+            <select id="ctClass" required onchange="populateSectionDropdown('ctClass','ctSec')" class="w-full border rounded p-2 text-sm"></select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">শাখা/বিভাগ</label>
+            <select id="ctSec" required class="w-full border rounded p-2 text-sm"></select>
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-gray-700 mb-1">বিষয়</label>
+          <input type="text" id="ctSubject" required placeholder="যেমন: গণিত, ইংরেজি" class="w-full border rounded p-2 text-sm">
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">পরীক্ষার ধরন</label>
+            <input type="text" id="ctType" required placeholder="যেমন: CT-1, সাপ্তাহিক" class="w-full border rounded p-2 text-sm">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1">মোট নম্বর</label>
+            <input type="number" id="ctTotalMarks" required value="20" class="w-full border rounded p-2 text-sm">
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-gray-700 mb-1">তারিখ</label>
+          <input type="date" id="ctDate" required class="w-full border rounded p-2 text-sm">
+        </div>
+        <div class="pt-2 flex justify-end space-x-2 space-x-reverse">
+          <button type="button" onclick="closeClassTestModal()" class="px-4 py-2 border rounded text-xs font-bold text-gray-600">বাতিল</button>
+          <button type="submit" class="px-5 py-2 bg-indigo-700 text-white rounded text-xs font-bold hover:bg-indigo-800 shadow">রেকর্ড যুক্ত করুন</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 text-xs py-6 mt-12 border-t border-gray-800">
+    <div class="container mx-auto px-4 text-center space-y-2">
+      <p class="font-bold text-gray-300">ভাউলাগঞ্জ বিজ্ঞান স্কুল এন্ড কলেজ</p>
+      <p>ঠিকানা: ভাউলাগঞ্জ, দেবীগঞ্জ, পঞ্চগড় | হটলাইন: ০১৭৩৭-১৮৮২৫২</p>
+      <p class="text-gray-600 pt-2">© ২০২৬ সর্বস্বত্ব সংরক্ষিত।</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    const DB_KEY = 'BHAULAGANJ_SCHOOL_DB_V8';
+
+    const defaultData = {
+      users: [
+        { 
+          name: "প্রধান শিক্ষক (এডমিন)", 
+          email: "admin@bhaulaganj.edu", 
+          pass: "admin123", 
+          role: "admin", 
+          department: "প্রধান শিক্ষক",
+          image: "https://images.unsplash.com/photo-1544717305-2782549b5136?w=300",
+          isCollege: false,
+          rules: [{ class: "ALL", section: "ALL", subject: "ALL" }]
+        },
+        { 
+          name: "নুরজামান স্যার", 
+          email: "teacher@bhaulaganj.edu", 
+          pass: "teacher123", 
+          role: "teacher", 
+          department: "সহকারী শিক্ষক - গণিত ও বিজ্ঞান",
+          image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300",
+          isCollege: false,
+          rules: [
+            { class: "৬ষ্ঠ", section: "ক", subject: "গণিত" },
+            { class: "৭ম", section: "ক", subject: "বিজ্ঞান" }
+          ]
+        },
+        {
+          name: "ড. রফিকুল ইসলাম",
+          email: "lecturer@bhaulaganj.edu",
+          pass: "college123",
+          role: "teacher",
+          department: "প্রভাষক - রসায়ন (কলেজ সেকশন)",
+          image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300",
+          isCollege: true,
+          rules: []
+        }
+      ],
+      classes: [
+        { name: "৬ষ্ঠ", type: "general", sections: ["ক", "খ"] },
+        { name: "৭ম", type: "general", sections: ["ক", "খ"] },
+        { name: "৮ম", type: "general", sections: ["ক", "খ"] },
+        { name: "৯ম", type: "group", sections: ["বিজ্ঞান (ক শাখা)", "বিজ্ঞান (খ শাখা)", "মানবিক"] },
+        { name: "১০ম", type: "group", sections: ["বিজ্ঞান (ক শাখা)", "বিজ্ঞান (খ শাখা)", "মানবিক"] }
+      ],
+      students: [
+        { id: "S101", name: "আব্দুল্লাহ আল মামুন", class: "৬ষ্ঠ", section: "ক", roll: 1, phone: "01700000001", blood: "A+", optionalSub: "", scholarship: false },
+        { id: "S102", name: "ফাতেমা জোহরা", class: "৮ম", section: "ক", roll: 1, phone: "01700000002", blood: "B+", optionalSub: "", scholarship: true },
+        { id: "S103", name: "রাফসান আহমেদ", class: "৯ম", section: "বিজ্ঞান (ক শাখা)", roll: 1, phone: "01700000003", blood: "O+", optionalSub: "উচ্চতর গণিত", scholarship: false }
+      ],
+      officialExams: [
+        { name: "অর্ধ-বার্ষিক পরীক্ষা", year: "2026" },
+        { name: "বৃত্তি মডেল টেস্ট", year: "2026" },
+        { name: "এসএসসি মডেল টেস্ট", year: "2026" }
+      ],
+      marks: [],
+      classTestRecords: [
+        { id: "CT1", class: "৬ষ্ঠ", section: "ক", subject: "গণিত", type: "CT-1", totalMarks: 20, date: "2026-03-10" }
+      ],
+      notices: [
+        { title: "২০২৬ শিক্ষাবর্ষের মডেল টেস্ট পরীক্ষার তারিখ ঘোষণা", date: "১৫ মে, ২০২৬", desc: "আগামী ১০ জুন ২০২৬ হতে মডেল টেস্ট পরীক্ষা অনুষ্ঠিত হবে।" },
+        { title: "অভিভাবক সমাবেশ সংক্রান্ত বিজ্ঞপ্তি", date: "০২ মে, ২০২৬", desc: "সকল শ্রেণির শিক্ষার্থীদের অভিভাবকদের আগামী রবিবার সকাল ১০ টায় উপস্থিত থাকার অনুরোধ করা হলো।" }
+      ]
+    };
+
+    let tempTeacherRules = [];
+    let currentTeacherPublicTab = 'school';
+
+    function getDB() {
+      const data = localStorage.getItem(DB_KEY);
+      if (!data) {
+        localStorage.setItem(DB_KEY, JSON.stringify(defaultData));
+        return defaultData;
+      }
+      return JSON.parse(data);
+    }
+
+    function saveDB(data) {
+      localStorage.setItem(DB_KEY, JSON.stringify(data));
+    }
+
+    let db = getDB();
+    let currentUser = null;
+
+    function showSection(secId) {
+      ['home', 'teachers', 'notices', 'results', 'login', 'dashboard'].forEach(s => {
+        document.getElementById(`sec-${s}`).classList.add('hidden');
+      });
+      document.getElementById(`sec-${secId}`).classList.remove('hidden');
+
+      if (secId === 'home') renderHomeNotices();
+      if (secId === 'teachers') filterPublicTeachers('school');
+      if (secId === 'notices') renderFullNotices();
+      if (secId === 'results') initResultsDropdowns();
+    }
+
+    function togglePassVisibility(inputId) {
+      const input = document.getElementById(inputId);
+      input.type = input.type === 'password' ? 'text' : 'password';
+    }
+
+    // --- PUBLIC TEACHERS TAB FILTERING (SCHOOL & COLLEGE) ---
+    function filterPublicTeachers(secType) {
+      currentTeacherPublicTab = secType;
+      
+      const btnSchool = document.getElementById('btnTeacherSchool');
+      const btnCollege = document.getElementById('btnTeacherCollege');
+
+      if (secType === 'school') {
+        btnSchool.className = 'px-4 py-1.5 text-xs font-bold rounded-md bg-blue-800 text-white shadow';
+        btnCollege.className = 'px-4 py-1.5 text-xs font-bold rounded-md text-gray-600 hover:text-gray-900';
+      } else {
+        btnCollege.className = 'px-4 py-1.5 text-xs font-bold rounded-md bg-blue-800 text-white shadow';
+        btnSchool.className = 'px-4 py-1.5 text-xs font-bold rounded-md text-gray-600 hover:text-gray-900';
+      }
+
+      const filteredList = db.users.filter(u => secType === 'college' ? u.isCollege : !u.isCollege);
+
+      const container = document.getElementById('publicTeachersGrid');
+      if (filteredList.length === 0) {
+        container.innerHTML = `<div class="col-span-full text-center text-gray-500 py-8">এই সেকশনে এখনো কোনো শিক্ষকের তথ্য যুক্ত করা হয়নি।</div>`;
+        return;
+      }
+
+      container.innerHTML = filteredList.map(u => `
+        <div class="bg-white rounded-xl shadow border p-4 text-center space-y-3 hover:shadow-lg transition border-t-4 ${u.isCollege ? 'border-indigo-600' : 'border-blue-800'}">
+          <div class="w-24 h-24 mx-auto rounded-full overflow-hidden bg-gray-100 border-2 border-blue-800 shadow">
+            <img src="${u.image || 'https://via.placeholder.com/150?text=No+Photo'}" alt="${u.name}" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h3 class="font-bold text-base text-gray-800">${u.name}</h3>
+            <span class="inline-block mt-1 ${u.isCollege ? 'bg-indigo-100 text-indigo-800' : 'bg-blue-100 text-blue-800'} text-xs font-bold px-2.5 py-0.5 rounded">${u.department || 'শিক্ষক'}</span>
+          </div>
+          <p class="text-xs text-gray-500"><i class="fa-solid fa-envelope mr-1"></i>${u.email}</p>
+        </div>
+      `).join('');
+    }
+
+    function renderHomeNotices() {
+      const container = document.getElementById('homeNoticeList');
+      container.innerHTML = db.notices.map(n => `
+        <div class="p-3 bg-gray-50 rounded-lg border-l-4 border-blue-800">
+          <span class="text-[10px] bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-bold">${n.date}</span>
+          <h4 class="font-bold text-sm text-gray-800 mt-1">${n.title}</h4>
+          <p class="text-xs text-gray-600 mt-0.5">${n.desc}</p>
+        </div>
+      `).join('');
+    }
+
+    function renderFullNotices() {
+      const container = document.getElementById('fullNoticeList');
+      container.innerHTML = db.notices.map(n => `
+        <div class="p-4 bg-gray-50 rounded-lg border space-y-1">
+          <span class="text-xs font-bold text-blue-800"><i class="fa-solid fa-calendar-days mr-1"></i>${n.date}</span>
+          <h3 class="font-bold text-base text-gray-800">${n.title}</h3>
+          <p class="text-sm text-gray-650">${n.desc}</p>
+        </div>
+      `).join('');
+    }
+
+    function handleLogin(e) {
+      e.preventDefault();
+      const email = document.getElementById('loginEmail').value.trim();
+      const pass = document.getElementById('loginPass').value.trim();
+
+      const user = db.users.find(u => u.email === email && u.pass === pass);
+      if (user) {
+        currentUser = user;
+        updateNavForAuth();
+        showDashboard();
+      } else {
+        alert('ইমেইল বা পাসওয়ার্ড ভুল হয়েছে!');
+      }
+    }
+
+    function fillLogin(email, pass) {
+      document.getElementById('loginEmail').value = email;
+      document.getElementById('loginPass').value = pass;
+    }
+
+    function updateNavForAuth() {
+      const authNav = document.getElementById('authNav');
+      if (currentUser) {
+        authNav.innerHTML = `
+          <button onclick="showSection('dashboard')" class="bg-yellow-500 hover:bg-yellow-600 text-blue-950 px-3 py-1.5 rounded shadow font-bold">
+            <i class="fa-solid fa-gauge mr-1"></i> ড্যাশবোর্ড
+          </button>
+        `;
+      } else {
+        authNav.innerHTML = `
+          <button onclick="showSection('login')" class="bg-green-600 hover:bg-green-700 px-4 py-1.5 rounded shadow transition"><i class="fa-solid fa-right-to-bracket mr-1"></i> লগইন</button>
+        `;
+      }
+    }
+
+    function handleLogout() {
+      currentUser = null;
+      updateNavForAuth();
+      showSection('home');
+    }
+
+    function showDashboard() {
+      showSection('dashboard');
+      document.getElementById('dashUserName').innerText = currentUser.name;
+      document.getElementById('dashUserEmail').innerText = currentUser.email;
+      document.getElementById('dashRoleBadge').innerText = currentUser.role === 'admin' ? 'এডমিন ড্যাশবোর্ড' : 'শিক্ষক প্যানেল';
+
+      if (currentUser.role === 'admin') {
+        document.getElementById('tab-admin-only').classList.remove('hidden');
+      } else {
+        document.getElementById('tab-admin-only').classList.add('hidden');
+      }
+
+      document.getElementById('profImgUrl').value = currentUser.image || '';
+      switchDashTab('students');
+    }
+
+    function switchDashTab(tabName) {
+      ['students', 'marks', 'classTests', 'adminControl', 'password'].forEach(t => {
+        const btn = document.getElementById(`tab-${t}`);
+        const content = document.getElementById(`dash-content-${t}`);
+        if (btn) btn.className = 'px-4 py-3 text-sm font-bold text-gray-500';
+        if (content) content.classList.add('hidden');
+      });
+
+      const activeBtn = document.getElementById(`tab-${tabName}`);
+      const activeContent = document.getElementById(`dash-content-${tabName}`);
+      if (activeBtn) activeBtn.className = 'px-4 py-3 text-sm font-bold tab-active';
+      if (activeContent) activeContent.classList.remove('hidden');
+
+      if (tabName === 'students') initStudentTab();
+      if (tabName === 'marks') initMarksTab();
+      if (tabName === 'classTests') renderClassTestRecords();
+      if (tabName === 'adminControl') initAdminControlTab();
+    }
+
+    function populateClassDropdown(selectId) {
+      const select = document.getElementById(selectId);
+      select.innerHTML = '<option value="">-- শ্রেণি সিলেক্ট করুন --</option>';
+      db.classes.forEach(c => {
+        select.innerHTML += `<option value="${c.name}">${c.name}</option>`;
+      });
+    }
+
+    function populateSectionDropdown(classSelectId, secSelectId) {
+      const selectedClass = document.getElementById(classSelectId).value;
+      const secSelect = document.getElementById(secSelectId);
+      secSelect.innerHTML = '<option value="">-- শাখা/বিভাগ সিলেক্ট করুন --</option>';
+
+      if (!selectedClass) return;
+
+      const clsObj = db.classes.find(c => c.name === selectedClass);
+      if (clsObj && clsObj.sections) {
+        clsObj.sections.forEach(s => {
+          if (currentUser && currentUser.role === 'teacher') {
+            const hasRule = currentUser.rules.some(r => r.class === selectedClass && (r.section === s || r.section === 'ALL'));
+            if (!hasRule && !currentUser.rules.some(r => r.class === 'ALL')) return;
+          }
+          secSelect.innerHTML += `<option value="${s}">${s}</option>`;
+        });
+      }
+    }
+
+    // --- PERMISSION BUILDER ---
+    function populatePermClassDropdown() {
+      const clsSel = document.getElementById('permClassSelect');
+      clsSel.innerHTML = '<option value="">-- শ্রেণি --</option>';
+      db.classes.forEach(c => {
+        clsSel.innerHTML += `<option value="${c.name}">${c.name}</option>`;
+      });
+    }
+
+    function onPermClassChange() {
+      const clsName = document.getElementById('permClassSelect').value;
+      const secSel = document.getElementById('permSecSelect');
+      const subjSel = document.getElementById('permSubjSelect');
+
+      secSel.innerHTML = '<option value="">-- শাখা --</option>';
+      subjSel.innerHTML = '<option value="">-- বিষয় --</option>';
+
+      if (!clsName) return;
+
+      const clsObj = db.classes.find(c => c.name === clsName);
+      if (clsObj && clsObj.sections) {
+        clsObj.sections.forEach(s => {
+          secSel.innerHTML += `<option value="${s}">${s}</option>`;
+        });
+      }
+
+      let subjects = [];
+      if (["৬ষ্ঠ", "৭ম", "৮ম"].includes(clsName)) {
+        subjects = ["বাংলা", "ইংরেজি", "গণিত", "বিজ্ঞান", "তথ্য ও যোগাযোগ প্রযুক্তি", "বাংলাদেশ ও বিশ্বপরিচয়", "ইসলাম শিক্ষা"];
+      } else if (["৯ম", "১০ম"].includes(clsName)) {
+        subjects = [
+          "বাংলা", "ইংরেজি", "গণিত", "ধর্ম শিক্ষা", "তথ্য ও যোগাযোগ প্রযুক্তি",
+          "পদার্থ বিজ্ঞান", "রসায়ন", "জীববিজ্ঞান", "বাংলাদেশ ও বিশ্বপরিচয়",
+          "পৌরনীতি ও নাগরিকতা", "বাংলাদেশের ইতিহাস ও বিশ্বসভ্যতা", "ভূগোল ও পরিবেশ", "সাধারণ বিজ্ঞান",
+          "উচ্চতর গণিত", "কৃষি শিক্ষা"
+        ];
+      }
+
+      subjects.forEach(sub => {
+        subjSel.innerHTML += `<option value="${sub}">${sub}</option>`;
+      });
+    }
+
+    function addTeacherPermissionRule() {
+      const cls = document.getElementById('permClassSelect').value;
+      const sec = document.getElementById('permSecSelect').value;
+      const subj = document.getElementById('permSubjSelect').value;
+
+      if (!cls || !sec || !subj) {
+        alert('দয়া করে শ্রেণি, শাখা ও বিষয় তিনটিই নির্বাচন করুন!');
+        return;
+      }
+
+      tempTeacherRules.push({ class: cls, section: sec, subject: subj });
+      renderTeacherRulesList();
+    }
+
+    function removeTeacherRule(index) {
+      tempTeacherRules.splice(index, 1);
+      renderTeacherRulesList();
+    }
+
+    function renderTeacherRulesList() {
+      const container = document.getElementById('teacherRuleList');
+      if (tempTeacherRules.length === 0) {
+        container.innerHTML = `<p class="text-gray-400 italic">কোনো পারমিশন যুক্ত করা হয়নি</p>`;
+        return;
+      }
+      container.innerHTML = tempTeacherRules.map((r, idx) => `
+        <div class="flex justify-between items-center bg-white p-1.5 rounded border">
+          <span class="font-bold text-blue-900">${r.class} (${r.section}) $\rightarrow$ <span class="text-indigo-700">${r.subject}</span></span>
+          <button type="button" onclick="removeTeacherRule(${idx})" class="text-red-600 font-bold hover:underline text-[10px]">মুছে ফেলুন</button>
+        </div>
+      `).join('');
+    }
+
+    // --- STUDENT EXTRA FIELDS ---
+    function checkClassForExtras() {
+      const cls = document.getElementById('studClass').value;
+      const sec = document.getElementById('studSec').value;
+
+      const higherMathDiv = document.getElementById('fieldHigherMath');
+      const schDiv = document.getElementById('fieldScholarship');
+
+      higherMathDiv.classList.add('hidden');
+      schDiv.classList.add('hidden');
+
+      if (cls === '৮ম') {
+        schDiv.classList.remove('hidden');
+      }
+      if ((cls === '৯ম' || cls === '১০ম') && sec === 'বিজ্ঞান (ক শাখা)') {
+        higherMathDiv.classList.remove('hidden');
+      }
+    }
+
+    function initStudentTab() {
+      populateClassDropdown('filterClass');
+      renderStudentTable();
+    }
+
+    function hasTeacherPermission(className, secName) {
+      if (!currentUser) return false;
+      if (currentUser.role === 'admin') return true;
+      return currentUser.rules.some(r => r.class === 'ALL' || (r.class === className && (r.section === secName || r.section === 'ALL')));
+    }
+
+    function renderStudentTable() {
+      const fClass = document.getElementById('filterClass').value;
+      const fSec = document.getElementById('filterSec').value;
+      const q = document.getElementById('searchStudent').value.toLowerCase();
+
+      let filtered = db.students.filter(s => {
+        const matchClass = !fClass || s.class === fClass;
+        const matchSec = !fSec || s.section === fSec;
+        const matchQ = s.name.toLowerCase().includes(q) || s.roll.toString().includes(q);
+        return matchClass && matchSec && matchQ;
+      });
+
+      const tbody = document.getElementById('studentTableBody');
+      tbody.innerHTML = filtered.map(s => {
+        const canEdit = hasTeacherPermission(s.class, s.section);
+        return `
+          <tr class="border-b hover:bg-gray-50">
+            <td class="p-3 font-bold">${s.roll}</td>
+            <td class="p-3">${s.name}</td>
+            <td class="p-3">${s.class}</td>
+            <td class="p-3"><span class="bg-gray-100 text-gray-800 px-2 py-0.5 rounded text-xs">${s.section}</span></td>
+            <td class="p-3 text-xs text-blue-800 font-semibold">${s.optionalSub || 'নাই'}</td>
+            <td class="p-3">${s.scholarship ? '<span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-0.5 rounded font-bold">বৃত্তি পরীক্ষার্থী</span>' : '-'}</td>
+            <td class="p-3 text-center space-x-1">
+              ${canEdit ? `
+                <button onclick="editStudent('${s.id}')" class="bg-blue-600 text-white text-xs px-2.5 py-1 rounded hover:bg-blue-700">এডিট</button>
+                <button onclick="deleteStudent('${s.id}')" class="bg-red-600 text-white text-xs px-2.5 py-1 rounded hover:bg-red-700">ডিলিট</button>
+              ` : `<span class="text-xs text-gray-400 italic">পারমিশন নেই</span>`}
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function openStudentModal() {
+      document.getElementById('studId').value = '';
+      document.getElementById('studName').value = '';
+      document.getElementById('studRoll').value = '';
+      document.getElementById('studPhone').value = '';
+      document.getElementById('studScholarship').checked = false;
+      document.getElementById('studIsHigherMath').checked = false;
+      
+      populateClassDropdown('studClass');
+      document.getElementById('studSec').innerHTML = '<option value="">-- শাখা/বিভাগ --</option>';
+      document.getElementById('fieldHigherMath').classList.add('hidden');
+      document.getElementById('fieldScholarship').classList.add('hidden');
+      
+      document.getElementById('modalStudentTitle').innerText = 'নতুন শিক্ষার্থী যুক্ত করুন';
+      document.getElementById('modalStudent').classList.remove('hidden');
+    }
+
+    function closeStudentModal() {
+      document.getElementById('modalStudent').classList.add('hidden');
+    }
+
+    function saveStudent(e) {
+      e.preventDefault();
+      const id = document.getElementById('studId').value || 'S' + Date.now();
+      const name = document.getElementById('studName').value.trim();
+      const cls = document.getElementById('studClass').value;
+      const sec = document.getElementById('studSec').value;
+      const roll = parseInt(document.getElementById('studRoll').value);
+      const phone = document.getElementById('studPhone').value.trim();
+      const blood = document.getElementById('studBlood').value;
+      
+      let optionalSub = "";
+      let scholarship = false;
+
+      if (['৬ষ্ঠ', '৭ম', '৮ম'].includes(cls)) {
+        optionalSub = "";
+        if (cls === '৮ম') {
+          scholarship = document.getElementById('studScholarship').checked;
+        }
+      } 
+      else if (['৯ম', '১০ম'].includes(cls)) {
+        if (sec === 'বিজ্ঞান (ক শাখা)') {
+          const isHigherMath = document.getElementById('studIsHigherMath').checked;
+          optionalSub = isHigherMath ? "উচ্চতর গণিত" : "কৃষি শিক্ষা";
+        } else {
+          optionalSub = "কৃষি শিক্ষা";
+        }
+      }
+
+      if (!hasTeacherPermission(cls, sec)) {
+        alert('আপনার এই শ্রেণি ও শাখায় শিক্ষার্থী যুক্ত করার অনুমতি নেই!');
+        return;
+      }
+
+      const existingIndex = db.students.findIndex(s => s.id === id);
+      const newObj = { id, name, class: cls, section: sec, roll, phone, blood, optionalSub, scholarship };
+
+      if (existingIndex > -1) {
+        db.students[existingIndex] = newObj;
+      } else {
+        db.students.push(newObj);
+      }
+
+      saveDB(db);
+      closeStudentModal();
+      renderStudentTable();
+    }
+
+    function editStudent(id) {
+      const s = db.students.find(x => x.id === id);
+      if (!s) return;
+
+      document.getElementById('studId').value = s.id;
+      document.getElementById('studName').value = s.name;
+      populateClassDropdown('studClass');
+      document.getElementById('studClass').value = s.class;
+      populateSectionDropdown('studClass', 'studSec');
+      document.getElementById('studSec').value = s.section;
+      document.getElementById('studRoll').value = s.roll;
+      document.getElementById('studPhone').value = s.phone;
+      document.getElementById('studBlood').value = s.blood || 'অজানা';
+      
+      checkClassForExtras();
+
+      if (s.class === '৮ম') {
+        document.getElementById('studScholarship').checked = s.scholarship || false;
+      }
+      if ((s.class === '৯ম' || s.class === '১০ম') && s.section === 'বিজ্ঞান (ক শাখা)') {
+        document.getElementById('studIsHigherMath').checked = (s.optionalSub === 'উচ্চতর গণিত');
+      }
+
+      document.getElementById('modalStudentTitle').innerText = 'শিক্ষার্থীর তথ্য এডিট';
+      document.getElementById('modalStudent').classList.remove('hidden');
+    }
+
+    function deleteStudent(id) {
+      if (!confirm('আপনি কি নিশ্চিত এই শিক্ষার্থীকে মুছে ফেলতে চান?')) return;
+      db.students = db.students.filter(s => s.id !== id);
+      saveDB(db);
+      renderStudentTable();
+    }
+
+    // --- MARKS ENTRY LOGIC ---
+    function initMarksTab() {
+      const examSel = document.getElementById('markExamSelect');
+      examSel.innerHTML = db.officialExams.map(e => `<option value="${e.name}">${e.name} (${e.year})</option>`).join('');
+      handleExamSelectChange();
+      document.getElementById('markEntryArea').classList.add('hidden');
+    }
+
+    function handleExamSelectChange() {
+      const exam = document.getElementById('markExamSelect').value;
+      const classSel = document.getElementById('markClassSelect');
+      
+      if (exam === 'বৃত্তি মডেল টেস্ট') {
+        classSel.innerHTML = '<option value="৮ম">৮ম (অটো-সিলেক্টেড)</option>';
+        classSel.value = '৮ম';
+        classSel.disabled = true;
+      } else if (exam === 'এসএসসি মডেল টেস্ট') {
+        classSel.innerHTML = '<option value="১০ম">১০ম (অটো-সিলেক্টেড)</option>';
+        classSel.value = '১০ম';
+        classSel.disabled = true;
+      } else {
+        classSel.disabled = false;
+        populateClassDropdown('markClassSelect');
+      }
+      populateSectionDropdown('markClassSelect', 'markSecSelect');
+      updateSubjectDropdownForClass();
+    }
+
+    function updateSubjectDropdownForClass() {
+      const cls = document.getElementById('markClassSelect').value;
+      const sec = document.getElementById('markSecSelect').value;
+      const subjSelect = document.getElementById('markSubjectSelect');
+      
+      let allowedSubjects = [];
+      if (currentUser.role === 'admin') {
+        if (["৬ষ্ঠ", "৭ম", "৮ম"].includes(cls)) {
+          allowedSubjects = ["বাংলা", "ইংরেজি", "গণিত", "বিজ্ঞান", "তথ্য ও যোগাযোগ প্রযুক্তি", "বাংলাদেশ ও বিশ্বপরিচয়", "ইসলাম শিক্ষা"];
+        } else {
+          allowedSubjects = [
+            "বাংলা", "ইংরেজি", "গণিত", "ধর্ম শিক্ষা", "তথ্য ও যোগাযোগ প্রযুক্তি",
+            "পদার্থ বিজ্ঞান", "রসায়ন", "জীববিজ্ঞান", "বাংলাদেশ ও বিশ্বপরিচয়",
+            "পৌরনীতি ও নাগরিকতা", "বাংলাদেশের ইতিহাস ও বিশ্বসভ্যতা", "ভূগোল ও পরিবেশ", "সাধারণ বিজ্ঞান",
+            "উচ্চতর গণিত", "কৃষি শিক্ষা"
+          ];
+        }
+      } else {
+        allowedSubjects = currentUser.rules
+          .filter(r => r.class === cls && (r.section === sec || r.section === 'ALL'))
+          .map(r => r.subject);
+      }
+
+      subjSelect.innerHTML = allowedSubjects.map(s => `<option value="${s}">${s}</option>`).join('');
+      handleSubjectChange();
+    }
+
+    function handleSubjectChange() {
+      const subj = document.getElementById('markSubjectSelect').value;
+      const cls = document.getElementById('markClassSelect').value;
+      const th1 = document.getElementById('thPart1');
+      const th2 = document.getElementById('thPart2');
+      const practicalCol = document.getElementById('thPractical');
+
+      practicalCol.classList.add('hidden');
+      th1.classList.remove('hidden');
+      th2.classList.remove('hidden');
+
+      if (["৬ষ্ঠ", "৭ম", "৮ম"].includes(cls)) {
+        if (subj === "বাংলা") { th1.innerText = "বাংলা ১ম (১০০)"; th2.innerText = "বাংলা ২য় (৫০)"; }
+        else if (subj === "ইংরেজি") { th1.innerText = "ইংরেজি ১ম (১০০)"; th2.innerText = "ইংরেজি ২য় (৫০)"; }
+        else if (subj === "তথ্য ও যোগাযোগ প্রযুক্তি") { th1.innerText = "লিখিত (২৫)"; th2.innerText = "ব্যবহারিক (২৫)"; }
+        else { th1.innerText = "পূর্ণ নম্বর (১০০)"; th2.classList.add('hidden'); }
+      } else {
+        if (["বাংলা", "ইংরেজি"].includes(subj)) {
+          th1.innerText = "১ম পত্র (১০০)"; th2.innerText = "২য় পত্র (১০০)";
+        } else {
+          th1.innerText = "বহুনির্বাচনী (MCQ)"; th2.innerText = "সৃজনশীল (CQ)";
+          const pracSubjects = ["পদার্থ বিজ্ঞান", "রসায়ন", "জীববিজ্ঞান", "কৃষি শিক্ষা", "তথ্য ও যোগাযোগ প্রযুক্তি"];
+          if (pracSubjects.includes(subj)) {
+            practicalCol.classList.remove('hidden');
+          }
+        }
+      }
+    }
+
+    function loadStudentsForMarkEntry() {
+      const exam = document.getElementById('markExamSelect').value;
+      const cls = document.getElementById('markClassSelect').value;
+      const sec = document.getElementById('markSecSelect').value;
+      const subj = document.getElementById('markSubjectSelect').value;
+
+      if (!cls || !sec || !subj) {
+        alert('দয়া করে শ্রেণি, শাখা ও বিষয় নির্বাচন করুন!');
+        return;
+      }
+
+      let filteredStudents = db.students.filter(s => s.class === cls && s.section === sec);
+      if (exam === 'বৃত্তি মডেল টেস্ট') {
+        filteredStudents = filteredStudents.filter(s => s.scholarship);
+      }
+
+      document.getElementById('markEntryHeader').innerText = `${cls} (${sec}) - বিষয়: ${subj} | ${exam} (${filteredStudents.length} জন শিক্ষার্থী)`;
+      document.getElementById('markTypeGuide').innerText = 'নম্বর ইনপুট দিয়ে সেভ করুন';
+
+      const tbody = document.getElementById('markEntryTableBody');
+      tbody.innerHTML = filteredStudents.map(s => {
+        const m = db.marks.find(x => x.studentId === s.id && x.exam === exam && x.subject === subj) || { part1: 0, part2: 0, practical: 0, total: 0 };
+        return `
+          <tr class="border-b" data-studentid="${s.id}">
+            <td class="p-3 font-bold">${s.roll}</td>
+            <td class="p-3">${s.name}</td>
+            <td class="p-3"><input type="number" class="inp-p1 w-20 border rounded p-1 text-center" value="${m.part1}" onchange="calcRowTotal(this)"></td>
+            <td class="p-3"><input type="number" class="inp-p2 w-20 border rounded p-1 text-center" value="${m.part2}" onchange="calcRowTotal(this)"></td>
+            <td class="p-3"><input type="number" class="inp-prac w-20 border rounded p-1 text-center" value="${m.practical || 0}" onchange="calcRowTotal(this)"></td>
+            <td class="p-3 font-bold text-blue-900 inp-total">${m.total}</td>
+          </tr>
+        `;
+      }).join('');
+
+      document.getElementById('markEntryArea').classList.remove('hidden');
+    }
+
+    function calcRowTotal(input) {
+      const tr = input.closest('tr');
+      const p1 = parseInt(tr.querySelector('.inp-p1').value) || 0;
+      const p2 = parseInt(tr.querySelector('.inp-p2').value) || 0;
+      const prac = parseInt(tr.querySelector('.inp-prac').value) || 0;
+      tr.querySelector('.inp-total').innerText = p1 + p2 + prac;
+    }
+
+    function saveAllMarks() {
+      const exam = document.getElementById('markExamSelect').value;
+      const subj = document.getElementById('markSubjectSelect').value;
+      const rows = document.querySelectorAll('#markEntryTableBody tr');
+
+      rows.forEach(tr => {
+        const studentId = tr.dataset.studentid;
+        const part1 = parseInt(tr.querySelector('.inp-p1').value) || 0;
+        const part2 = parseInt(tr.querySelector('.inp-p2').value) || 0;
+        const practical = parseInt(tr.querySelector('.inp-prac').value) || 0;
+        const total = part1 + part2 + practical;
+
+        const idx = db.marks.findIndex(m => m.studentId === studentId && m.exam === exam && m.subject === subj);
+        const record = { studentId, exam, subject: subj, part1, part2, practical, total };
+
+        if (idx > -1) {
+          db.marks[idx] = record;
+        } else {
+          db.marks.push(record);
+        }
+      });
+
+      saveDB(db);
+      alert('সকল নম্বর ডেটাবেসে সফলভাবে সংরক্ষিত হয়েছে!');
+    }
+
+    // --- CLASS TEST RECORDS ---
+    function renderClassTestRecords() {
+      const tbody = document.getElementById('classTestTableBody');
+      let records = db.classTestRecords;
+      tbody.innerHTML = records.map(ct => `
+        <tr class="border-b hover:bg-gray-50">
+          <td class="p-3">${ct.date}</td>
+          <td class="p-3 font-bold">${ct.class} (${ct.section})</td>
+          <td class="p-3">${ct.subject}</td>
+          <td class="p-3"><span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-0.5 rounded">${ct.type}</span></td>
+          <td class="p-3 font-bold">${ct.totalMarks}</td>
+          <td class="p-3 text-center">
+            ${currentUser.role === 'admin' ? `<button onclick="deleteClassTest('${ct.id}')" class="bg-red-600 text-white text-xs px-2 py-1 rounded">ডিলিট</button>` : '-'}
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    function openClassTestModal() {
+      populateClassDropdown('ctClass');
+      document.getElementById('modalClassTest').classList.remove('hidden');
+    }
+
+    function closeClassTestModal() {
+      document.getElementById('modalClassTest').classList.add('hidden');
+    }
+
+    function saveClassTestRecord(e) {
+      e.preventDefault();
+      const cls = document.getElementById('ctClass').value;
+      const sec = document.getElementById('ctSec').value;
+      const subject = document.getElementById('ctSubject').value.trim();
+      const type = document.getElementById('ctType').value.trim();
+      const totalMarks = parseInt(document.getElementById('ctTotalMarks').value);
+      const date = document.getElementById('ctDate').value;
+
+      db.classTestRecords.push({ id: 'CT' + Date.now(), class: cls, section: sec, subject, type, totalMarks, date });
+      saveDB(db);
+      closeClassTestModal();
+      renderClassTestRecords();
+    }
+
+    function deleteClassTest(id) {
+      if (!confirm('ক্লাসটেস্ট রেকর্ডটি ডিলিট করতে চান?')) return;
+      db.classTestRecords = db.classTestRecords.filter(x => x.id !== id);
+      saveDB(db);
+      renderClassTestRecords();
+    }
+
+    // --- ADMIN TEACHER MANAGEMENT ---
+    function initAdminControlTab() {
+      renderAdminTeacherTable();
+      renderClassListAdmin();
+    }
+
+    function renderAdminTeacherTable() {
+      const tbody = document.getElementById('adminTeacherTableBody');
+      tbody.innerHTML = db.users.map(t => {
+        const ruleSummary = (t.rules || []).map(r => `${r.class}(${r.section})-${r.subject}`).join(', ');
+        return `
+          <tr class="border-b hover:bg-gray-50">
+            <td class="p-3 font-bold flex items-center space-x-2 space-x-reverse">
+              <img src="${t.image || 'https://via.placeholder.com/40'}" class="w-8 h-8 rounded-full object-cover">
+              <span>${t.name}</span>
+            </td>
+            <td class="p-3 text-xs">${t.email}</td>
+            <td class="p-3"><span class="${t.isCollege ? 'bg-indigo-100 text-indigo-800' : 'bg-green-100 text-green-800'} text-xs px-2 py-0.5 rounded font-bold">${t.isCollege ? 'কলেজ সেকশন' : 'স্কুল সেকশন'}</span></td>
+            <td class="p-3"><span class="bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded font-bold">${t.department}</span></td>
+            <td class="p-3 text-xs text-indigo-900 font-medium">${ruleSummary || 'সকল বিষয় ও শ্রেণি'}</td>
+            <td class="p-3 text-center space-x-1">
+              <button onclick="openEditTeacherModal('${t.email}')" class="bg-blue-600 text-white text-xs px-2.5 py-1 rounded">এডিট</button>
+              ${t.email !== 'admin@bhaulaganj.edu' ? `<button onclick="deleteTeacher('${t.email}')" class="bg-red-600 text-white text-xs px-2.5 py-1 rounded">ডিলিট</button>` : ''}
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function openAddTeacherModal() {
+      document.getElementById('tOriginalEmail').value = '';
+      document.getElementById('tName').value = '';
+      document.getElementById('tEmail').value = '';
+      document.getElementById('tPass').value = '';
+      document.getElementById('tDept').value = '';
+      document.getElementById('tImage').value = '';
+      document.getElementById('tIsCollege').checked = false;
+      
+      document.getElementById('modalTeacherTitle').innerText = 'নতুন শিক্ষক যুক্ত করুন';
+      tempTeacherRules = [];
+      populatePermClassDropdown();
+      renderTeacherRulesList();
+      document.getElementById('modalTeacher').classList.remove('hidden');
+    }
+
+    function openEditTeacherModal(email) {
+      const t = db.users.find(u => u.email === email);
+      if (!t) return;
+
+      document.getElementById('tOriginalEmail').value = t.email;
+      document.getElementById('tName').value = t.name;
+      document.getElementById('tEmail').value = t.email;
+      document.getElementById('tPass').value = t.pass;
+      document.getElementById('tDept').value = t.department;
+      document.getElementById('tImage').value = t.image || '';
+      document.getElementById('tIsCollege').checked = t.isCollege || false;
+
+      document.getElementById('modalTeacherTitle').innerText = 'শিক্ষক তথ্য এডিট করুন';
+      
+      tempTeacherRules = [...(t.rules || [])];
+      populatePermClassDropdown();
+      renderTeacherRulesList();
+      document.getElementById('modalTeacher').classList.remove('hidden');
+    }
+
+    function closeTeacherModal() {
+      document.getElementById('modalTeacher').classList.add('hidden');
+    }
+
+    function saveTeacherAdmin(e) {
+      e.preventDefault();
+      const origEmail = document.getElementById('tOriginalEmail').value;
+      const name = document.getElementById('tName').value.trim();
+      const email = document.getElementById('tEmail').value.trim();
+      const pass = document.getElementById('tPass').value.trim();
+      const department = document.getElementById('tDept').value.trim();
+      const image = document.getElementById('tImage').value.trim();
+      const isCollege = document.getElementById('tIsCollege').checked;
+
+      if (origEmail) {
+        const user = db.users.find(u => u.email === origEmail);
+        if (user) {
+          user.name = name;
+          user.email = email;
+          user.pass = pass;
+          user.department = department;
+          user.image = image;
+          user.isCollege = isCollege;
+          user.rules = [...tempTeacherRules];
+        }
+      } else {
+        if (db.users.some(u => u.email === email)) {
+          alert('এই ইমেইল দিয়ে ইতিপূর্বে শিক্ষক রেজিস্টার্ড করা হয়েছে!');
+          return;
+        }
+        db.users.push({ name, email, pass, role: 'teacher', department, image, isCollege, rules: [...tempTeacherRules] });
+      }
+
+      saveDB(db);
+      closeTeacherModal();
+      renderAdminTeacherTable();
+      alert('শিক্ষকের তথ্য ও পারমিশন সফলভাবে সংরক্ষিত হয়েছে!');
+    }
+
+    function deleteTeacher(email) {
+      if (!confirm('শিক্ষক একাউন্টটি ডিলিট করতে চান?')) return;
+      db.users = db.users.filter(u => u.email !== email);
+      saveDB(db);
+      renderAdminTeacherTable();
+    }
+
+    // --- CLASSES & SECTIONS ADMIN ---
+    function renderClassListAdmin() {
+      const ul = document.getElementById('classListGroup');
+      ul.innerHTML = db.classes.map((c, i) => `
+        <li class="bg-gray-50 p-3 rounded border flex justify-between items-center">
+          <div>
+            <span class="font-bold text-gray-800">${c.name}</span>
+            <span class="text-xs text-gray-500 ml-2">(${c.sections.join(', ')})</span>
+          </div>
+          <button onclick="editSectionName('${c.name}')" class="bg-blue-600 text-white text-xs px-2.5 py-1 rounded">শাখা এডিট</button>
+        </li>
+      `).join('');
+    }
+
+    function addManualSection() {
+      const clsName = document.getElementById('manualClassSelect').value;
+      const secName = document.getElementById('manualSecName').value.trim();
+      if (!secName) return;
+
+      const clsObj = db.classes.find(c => c.name === clsName);
+      if (clsObj && !clsObj.sections.includes(secName)) {
+        clsObj.sections.push(secName);
+        saveDB(db);
+        document.getElementById('manualSecName').value = '';
+        renderClassListAdmin();
+        alert('নতুন শাখা সফলভাবে যুক্ত করা হয়েছে!');
+      } else {
+        alert('শাখাটি ইতিমধ্যে বিদ্যমান অথবা ভুল হয়েছে।');
+      }
+    }
+
+    function editSectionName(className) {
+      const clsObj = db.classes.find(c => c.name === className);
+      if (!clsObj) return;
+      const oldSecs = clsObj.sections.join(', ');
+      const newSecsStr = prompt(`${className} শ্রেণির শাখাসমূহ কমা দিয়ে লিখুন:`, oldSecs);
+      if (newSecsStr !== null) {
+        const arr = newSecsStr.split(',').map(s => s.trim()).filter(Boolean);
+        clsObj.sections = arr;
+        saveDB(db);
+        renderClassListAdmin();
+      }
+    }
+
+    function addNewOfficialExam() {
+      const name = document.getElementById('adminExamName').value.trim();
+      const year = document.getElementById('adminExamYear').value.trim();
+      if (!name) return;
+
+      db.officialExams.push({ name, year });
+      saveDB(db);
+      alert('নতুন পরীক্ষা চালু করা হয়েছে!');
+    }
+
+    // --- PROFILE & PASSWORD UPDATE ---
+    function handleProfileUpdate(e) {
+      e.preventDefault();
+      const imgUrl = document.getElementById('profImgUrl').value.trim();
+      const userInDb = db.users.find(u => u.email === currentUser.email);
+      if (userInDb) {
+        userInDb.image = imgUrl;
+        currentUser.image = imgUrl;
+        saveDB(db);
+        alert('প্রোফাইল ছবি আপডেট হয়েছে!');
+      }
+    }
+
+    function handleChangePassword(e) {
+      e.preventDefault();
+      const oldPass = document.getElementById('oldPass').value.trim();
+      const newPass = document.getElementById('newPass').value.trim();
+      const confirmPass = document.getElementById('confirmPass').value.trim();
+
+      if (oldPass !== currentUser.pass) {
+        alert('বর্তমান পাসওয়ার্ড ভুল!');
+        return;
+      }
+      if (newPass !== confirmPass) {
+        alert('নতুন পাসওয়ার্ড মিলছে না!');
+        return;
+      }
+
+      const userInDb = db.users.find(u => u.email === currentUser.email);
+      if (userInDb) {
+        userInDb.pass = newPass;
+        currentUser.pass = newPass;
+        saveDB(db);
+        alert('পাসওয়ার্ড পরিবর্তিত হয়েছে!');
+        document.getElementById('oldPass').value = '';
+        document.getElementById('newPass').value = '';
+        document.getElementById('confirmPass').value = '';
+      }
+    }
+
+    function getGpaAndStatusFromScore(percentage) {
+      if (percentage >= 80) return { gpa: 5.0, letter: 'A+' };
+      if (percentage >= 70) return { gpa: 4.0, letter: 'A' };
+      if (percentage >= 60) return { gpa: 3.5, letter: 'A-' };
+      if (percentage >= 50) return { gpa: 3.0, letter: 'B' };
+      if (percentage >= 40) return { gpa: 2.0, letter: 'C' };
+      if (percentage >= 33) return { gpa: 1.0, letter: 'D' };
+      return { gpa: 0.0, letter: 'F' };
+    }
+
+    // --- PUBLIC RESULTS SEARCH ---
+    function initResultsDropdowns() {
+      populateClassDropdown('resClass');
+    }
+
+    function handlePublicExamChange() {
+      const exam = document.getElementById('resExam').value;
+      const classSel = document.getElementById('resClass');
+      if (exam === 'বৃত্তি মডেল টেস্ট') {
+        classSel.innerHTML = '<option value="৮ম">৮ম (অটো-সিলেক্টেড)</option>';
+        classSel.value = '৮ম';
+        classSel.disabled = true;
+      } else if (exam === 'এসএসসি মডেল টেস্ট') {
+        classSel.innerHTML = '<option value="১০ম">১০ম (অটো-সিলেক্টেড)</option>';
+        classSel.value = '১০ম';
+        classSel.disabled = true;
+      } else {
+        classSel.disabled = false;
+        populateClassDropdown('resClass');
+      }
+    }
+
+    function searchPublicResults() {
+      const cls = document.getElementById('resClass').value;
+      const exam = document.getElementById('resExam').value;
+      const year = document.getElementById('resYear').value;
+
+      if (!cls) {
+        alert('দয়া করে শ্রেণি নির্বাচন করুন!');
+        return;
+      }
+
+      let studentsInClass = db.students.filter(s => s.class === cls);
+      if (exam === 'বৃত্তি মডেল টেস্ট') {
+        studentsInClass = studentsInClass.filter(s => s.scholarship);
+      }
+
+      let resultsData = studentsInClass.map(s => {
+        const studentMarks = db.marks.filter(m => m.studentId === s.id && m.exam === exam);
+        const grandTotal = studentMarks.reduce((acc, m) => acc + m.total, 0);
+
+        let calculatedGpa = 0.0;
+        let isFailed = false;
+
+        if (["৯ম", "১০ম"].includes(cls)) {
+          let compulsoryGpaSum = 0;
+          let compulsoryCount = 0;
+          let optionalGpa = 0;
+
+          const b1 = studentMarks.find(m => m.subject === "বাংলা")?.part1 || 0;
+          const b2 = studentMarks.find(m => m.subject === "বাংলা")?.part2 || 0;
+          const bRes = getGpaAndStatusFromScore(((b1 + b2) / 200) * 100);
+          if (bRes.gpa === 0) isFailed = true;
+          compulsoryGpaSum += bRes.gpa;
+          compulsoryCount++;
+
+          const e1 = studentMarks.find(m => m.subject === "ইংরেজি")?.part1 || 0;
+          const e2 = studentMarks.find(m => m.subject === "ইংরেজি")?.part2 || 0;
+          const eRes = getGpaAndStatusFromScore(((e1 + e2) / 200) * 100);
+          if (eRes.gpa === 0) isFailed = true;
+          compulsoryGpaSum += eRes.gpa;
+          compulsoryCount++;
+
+          studentMarks.forEach(m => {
+            if (m.subject !== "বাংলা" && m.subject !== "ইংরেজি" && m.subject !== s.optionalSub) {
+              const res = getGpaAndStatusFromScore((m.total / 100) * 100);
+              if (res.gpa === 0) isFailed = true;
+              compulsoryGpaSum += res.gpa;
+              compulsoryCount++;
+            }
+          });
+
+          if (s.optionalSub) {
+            const optMarkObj = studentMarks.find(m => m.subject === s.optionalSub);
+            if (optMarkObj) {
+              const optRes = getGpaAndStatusFromScore((optMarkObj.total / 100) * 100);
+              if (optRes.gpa > 2.0) optionalGpa = optRes.gpa - 2.0;
+            }
+          }
+
+          if (isFailed) calculatedGpa = 0.0;
+          else {
+            calculatedGpa = (compulsoryGpaSum + optionalGpa) / Math.max(1, compulsoryCount);
+            if (calculatedGpa > 5.0) calculatedGpa = 5.0;
+          }
+        } else {
+          let totalGpa = 0;
+          let count = 0;
+          studentMarks.forEach(m => {
+            let fullMark = 100;
+            if (m.subject === "বাংলা" || m.subject === "ইংরেজি") fullMark = 150;
+            if (m.subject === "তথ্য ও যোগাযোগ প্রযুক্তি") fullMark = 50;
+
+            const res = getGpaAndStatusFromScore((m.total / fullMark) * 100);
+            if (res.gpa === 0) isFailed = true;
+            totalGpa += res.gpa;
+            count++;
+          });
+          calculatedGpa = count > 0 ? (totalGpa / count) : 0.0;
+          if (isFailed) calculatedGpa = 0.0;
+          if (calculatedGpa > 5.0) calculatedGpa = 5.0;
+        }
+
+        const finalStatus = isFailed || calculatedGpa === 0 ? 'অকৃতকার্য (F)' : `উত্তীর্ণ (GPA ${calculatedGpa.toFixed(2)})`;
+        return { student: s, grandTotal, gpa: calculatedGpa.toFixed(2), status: finalStatus, isFailed };
+      });
+
+      resultsData.sort((a, b) => b.grandTotal - a.grandTotal);
+
+      document.getElementById('resultTitle').innerText = `${exam} (${year}) - ${cls} শ্রেণির মেধা তালিকা`;
+
+      const tbody = document.getElementById('resultTableBody');
+      if (resultsData.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="7" class="p-4 text-center text-gray-500">কোনো তথ্য পাওয়া যায়নি!</td></tr>`;
+      } else {
+        tbody.innerHTML = resultsData.map((res, index) => `
+          <tr class="border-b hover:bg-gray-50">
+            <td class="p-3 font-bold text-blue-900">${res.isFailed ? '-' : '#' + (index + 1)}</td>
+            <td class="p-3 font-semibold">${res.student.roll}</td>
+            <td class="p-3">${res.student.name}</td>
+            <td class="p-3"><span class="bg-gray-100 text-xs px-2 py-0.5 rounded">${res.student.section}</span></td>
+            <td class="p-3 font-bold text-gray-800">${res.grandTotal}</td>
+            <td class="p-3 font-bold text-green-700">${res.gpa}</td>
+            <td class="p-3"><span class="${res.isFailed ? 'bg-red-100 text-red-800' : 'bg-green-100 text-green-800'} text-xs px-2 py-0.5 rounded font-bold">${res.status}</span></td>
+          </tr>
+        `).join('');
+      }
+
+      document.getElementById('resultOutput').classList.remove('hidden');
+    }
+
+    window.onload = function() {
+      renderHomeNotices();
+    };
+  </script>
+</body>
+</html>
