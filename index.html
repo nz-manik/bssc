@@ -56,7 +56,7 @@
           <div class="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-2xl border border-blue-200 text-center w-full">
             <i class="fa-solid fa-graduation-cap text-5xl text-blue-800 mb-3"></i>
             <h3 class="font-bold text-gray-800">অনলাইন ফলাফল অনুসন্ধান</h3>
-            <p class="text-xs text-gray-600 mb-4 mt-1">অর্ধ-বার্ষিক, বৃত্তি ও এসএসসি মডেল টেস্ট পরীক্ষার রেজাল্ট দেখতে ক্লিক করুন</p>
+            <p class="text-xs text-gray-600 mb-4 mt-1">অর্ধ-বার্ষিক, বার্ষিক, বৃত্তি ও এসএসসি মডেল টেস্ট পরীক্ষার রেজাল্ট দেখতে ক্লিক করুন</p>
             <button onclick="showSection('results')" class="w-full bg-blue-800 text-white font-bold py-2 rounded-lg hover:bg-blue-900 shadow">ফলাফল দেখুন</button>
           </div>
         </div>
@@ -113,7 +113,7 @@
     <section id="sec-results" class="hidden space-y-6">
       <div class="bg-white p-6 rounded-xl shadow space-y-4">
         <h2 class="text-xl font-bold text-gray-800 border-b pb-2"><i class="fa-solid fa-square-poll-vertical text-blue-800 mr-2"></i>অনলাইন একাডেমিক ফলাফল পরীক্ষা (পাবলিক পোর্টাল)</h2>
-        <p class="text-xs text-gray-500">এখানে অর্ধবার্ষিক, বৃত্তি মডেল টেস্ট ও এসএসসি মডেল টেস্ট পরীক্ষার মেধা তালিকা দেখা যাবে।</p>
+        <p class="text-xs text-gray-500">এখানে অর্ধবার্ষিক, বার্ষিক, বৃত্তি ও এসএসসি মডেল টেস্ট পরীক্ষার মেধা তালিকা দেখা যাবে।</p>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
           <div>
@@ -127,6 +127,7 @@
             <label class="block text-xs font-bold text-gray-700 mb-1">পরীক্ষার নাম</label>
             <select id="resExam" onchange="handlePublicExamChange()" class="w-full border rounded p-2 text-sm">
               <option value="অর্ধ-বার্ষিক পরীক্ষা">অর্ধ-বার্ষিক পরীক্ষা</option>
+              <option value="বার্ষিক পরীক্ষা">বার্ষিক পরীক্ষা</option>
               <option value="বৃত্তি মডেল টেস্ট">বৃত্তি মডেল টেস্ট</option>
               <option value="এসএসসি মডেল টেস্ট">এসএসসি মডেল টেস্ট</option>
             </select>
@@ -168,7 +169,7 @@
       </div>
     </section>
 
-    <!-- SECURE LOGIN SECTION (NO DEMO CREDENTIALS DISPLAYED) -->
+    <!-- SECURE LOGIN SECTION -->
     <section id="sec-login" class="hidden max-w-md mx-auto my-10">
       <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
         <div class="text-center mb-6">
@@ -354,7 +355,7 @@
         </div>
       </div>
 
-      <!-- TAB 4: ADMIN CONTROL -->
+      <!-- TAB 4: ADMIN CONTROL (MANAGE TEACHERS, EXAMS & EXAM RESULTS DATABASE) -->
       <div id="dash-content-adminControl" class="hidden bg-white p-6 rounded-b-xl shadow space-y-8">
         
         <!-- Manage Teachers -->
@@ -379,6 +380,42 @@
                 </tr>
               </thead>
               <tbody id="adminTeacherTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Manage Official Exams & Delete Exam Results Database -->
+        <div class="space-y-4 pt-4 border-t">
+          <h3 class="font-bold text-lg text-gray-800 border-b pb-2"><i class="fa-solid fa-square-poll-vertical text-blue-800 mr-1"></i> পরীক্ষার ফলাফল ডেটাবেস ও পরীক্ষা পরিচালনা</h3>
+          <p class="text-xs text-gray-500">এডমিন চাইলে যেকোনো পরীক্ষা (যেমন: অর্ধ-বার্ষিক, বার্ষিক, বৃত্তি মডেল টেস্ট ইত্যাদি) এবং তার সমস্ত এন্ট্রি বা ডেটা স্থায়ীভাবে ডিলিট করতে পারবেন।</p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-gray-50 p-4 rounded-lg border mb-4">
+            <div>
+              <label class="block text-xs font-bold text-gray-700 mb-1">নতুন পরীক্ষার নাম</label>
+              <input type="text" id="adminExamName" placeholder="যেমন: নির্বাচনী পরীক্ষা" class="w-full border rounded p-2 text-sm">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-gray-700 mb-1">সাল</label>
+              <input type="text" id="adminExamYear" value="2026" class="w-full border rounded p-2 text-sm">
+            </div>
+            <div class="flex items-end">
+              <button onclick="addNewOfficialExam()" class="w-full bg-blue-800 text-white font-bold py-2 rounded text-sm hover:bg-blue-900 shadow">
+                <i class="fa-solid fa-plus mr-1"></i> পরীক্ষা চালু করুন
+              </button>
+            </div>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm border-collapse">
+              <thead>
+                <tr class="bg-gray-100 border-b text-gray-700">
+                  <th class="p-3">পরীক্ষার নাম</th>
+                  <th class="p-3">সাল</th>
+                  <th class="p-3">সংরক্ষিত মার্কস এন্ট্রি সংখ্যা</th>
+                  <th class="p-3 text-center">অ্যাকশন (পরীক্ষা ও ফলাফল ডিলিট)</th>
+                </tr>
+              </thead>
+              <tbody id="adminExamTableBody"></tbody>
             </table>
           </div>
         </div>
@@ -408,26 +445,6 @@
               </div>
               <button onclick="addManualSection()" class="bg-green-700 hover:bg-green-800 text-white font-bold text-xs px-4 py-2 rounded shadow">
                 <i class="fa-solid fa-plus mr-1"></i> শাখা যুক্ত করুন
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Admin Setup Official Exams -->
-        <div class="space-y-4 pt-4 border-t">
-          <h3 class="font-bold text-lg text-gray-800 border-b pb-2"><i class="fa-solid fa-calendar-check text-blue-800 mr-1"></i> প্রাতিষ্ঠানিক পরীক্ষা সেটআপ</h3>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-gray-50 p-4 rounded-lg border">
-            <div>
-              <label class="block text-xs font-bold text-gray-700 mb-1">পরীক্ষার নাম</label>
-              <input type="text" id="adminExamName" placeholder="পরীক্ষার নাম" class="w-full border rounded p-2 text-sm">
-            </div>
-            <div>
-              <label class="block text-xs font-bold text-gray-700 mb-1">সাল</label>
-              <input type="text" id="adminExamYear" value="2026" class="w-full border rounded p-2 text-sm">
-            </div>
-            <div class="flex items-end">
-              <button onclick="addNewOfficialExam()" class="w-full bg-blue-800 text-white font-bold py-2 rounded text-sm hover:bg-blue-900 shadow">
-                <i class="fa-solid fa-plus mr-1"></i> পরীক্ষা চালু করুন
               </button>
             </div>
           </div>
@@ -690,17 +707,17 @@
     </div>
   </footer>
 
-  <!-- JAVASCRIPT LOGIC (SECURED SESSION) -->
+  <!-- JAVASCRIPT LOGIC -->
   <script>
-    const DB_KEY = 'BHAULAGANJ_SCHOOL_DB_V9';
+    const DB_KEY = 'BHAULAGANJ_SCHOOL_DB_V10';
     const SESSION_KEY = 'BHAULAGANJ_CURRENT_USER';
 
     const defaultData = {
       users: [
         { 
           name: "প্রধান শিক্ষক (এডমিন)", 
-          email: "admin@bhaulaganj.edu", 
-          pass: "Admin@2026Secure", 
+          email: "admin@bssc.edu", 
+          pass: "Admin@2026Manik", 
           role: "admin", 
           department: "প্রধান শিক্ষক",
           image: "https://images.unsplash.com/photo-1544717305-2782549b5136?w=300",
@@ -709,8 +726,8 @@
         },
         { 
           name: "নুরজামান স্যার", 
-          email: "teacher@bhaulaganj.edu", 
-          pass: "Teacher@2026", 
+          email: "nurzaman@bssc.edu", 
+          pass: "Nurzaman@2026", 
           role: "teacher", 
           department: "সহকারী শিক্ষক - গণিত ও বিজ্ঞান",
           image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300",
@@ -735,6 +752,7 @@
       ],
       officialExams: [
         { name: "অর্ধ-বার্ষিক পরীক্ষা", year: "2026" },
+        { name: "বার্ষিক পরীক্ষা", year: "2026" },
         { name: "বৃত্তি মডেল টেস্ট", year: "2026" },
         { name: "এসএসসি মডেল টেস্ট", year: "2026" }
       ],
@@ -767,7 +785,6 @@
     let db = getDB();
     let currentUser = null;
 
-    // Secure Session Check on Load
     function checkExistingSession() {
       const sessionData = sessionStorage.getItem(SESSION_KEY);
       if (sessionData) {
@@ -781,7 +798,6 @@
     }
 
     function showSection(secId) {
-      // Prevent unauthorized access to dashboard
       if (secId === 'dashboard' && !currentUser) {
         alert('অনুগ্রহ করে প্রথমে লগইন করুন!');
         showSection('login');
@@ -805,7 +821,6 @@
       input.type = input.type === 'password' ? 'text' : 'password';
     }
 
-    // --- PUBLIC TEACHERS TAB FILTERING ---
     function filterPublicTeachers(secType) {
       currentTeacherPublicTab = secType;
       
@@ -864,13 +879,12 @@
       `).join('');
     }
 
-    // --- SECURE AUTHENTICATION ---
     function handleLogin(e) {
       e.preventDefault();
       const email = document.getElementById('loginEmail').value.trim();
       const pass = document.getElementById('loginPass').value.trim();
 
-      db = getDB(); // Refresh DB
+      db = getDB();
       const user = db.users.find(u => u.email === email && u.pass === pass);
       if (user) {
         currentUser = user;
@@ -977,7 +991,6 @@
       }
     }
 
-    // --- PERMISSION BUILDER ---
     function populatePermClassDropdown() {
       const clsSel = document.getElementById('permClassSelect');
       clsSel.innerHTML = '<option value="">-- শ্রেণি --</option>';
@@ -1053,7 +1066,6 @@
       `).join('');
     }
 
-    // --- STUDENT EXTRA FIELDS ---
     function checkClassForExtras() {
       const cls = document.getElementById('studClass').value;
       const sec = document.getElementById('studSec').value;
@@ -1374,7 +1386,6 @@
       alert('সকল নম্বর ডেটাবেসে সফলভাবে সংরক্ষিত হয়েছে!');
     }
 
-    // --- CLASS TEST RECORDS ---
     function renderClassTestRecords() {
       const tbody = document.getElementById('classTestTableBody');
       let records = db.classTestRecords;
@@ -1423,9 +1434,10 @@
       renderClassTestRecords();
     }
 
-    // --- ADMIN TEACHER MANAGEMENT ---
+    // --- ADMIN CONTROL & EXAM RESULTS DELETE MANAGEMENT ---
     function initAdminControlTab() {
       renderAdminTeacherTable();
+      renderAdminExamTable();
       renderClassListAdmin();
     }
 
@@ -1450,6 +1462,38 @@
           </tr>
         `;
       }).join('');
+    }
+
+    function renderAdminExamTable() {
+      const tbody = document.getElementById('adminExamTableBody');
+      tbody.innerHTML = db.officialExams.map(ex => {
+        const entryCount = db.marks.filter(m => m.exam === ex.name).length;
+        return `
+          <tr class="border-b hover:bg-gray-50">
+            <td class="p-3 font-bold text-gray-800">${ex.name}</td>
+            <td class="p-3 text-xs">${ex.year}</td>
+            <td class="p-3 font-medium text-blue-800">${entryCount} টি মার্কস রেকর্ড</td>
+            <td class="p-3 text-center">
+              <button onclick="deleteOfficialExam('${ex.name}')" class="bg-red-600 hover:bg-red-700 text-white text-xs px-3 py-1.5 rounded font-bold">
+                <i class="fa-solid fa-trash-can mr-1"></i> পরীক্ষা ও ফলাফল ডিলিট
+              </button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function deleteOfficialExam(examName) {
+      if (!confirm(`সতর্কবার্তা: আপনি কি নিশ্চিত "${examName}" পরীক্ষা এবং এর সাথে সম্পর্কিত সমস্ত শিক্ষার্থীর ফলাফল/নম্বর ডেটাবেস থেকে স্থায়ীভাবে ডিলিট করতে চান?`)) return;
+
+      // Remove exam from official exams
+      db.officialExams = db.officialExams.filter(e => e.name !== examName);
+      // Remove all marks associated with this exam
+      db.marks = db.marks.filter(m => m.exam !== examName);
+
+      saveDB(db);
+      renderAdminExamTable();
+      alert(`"${examName}" এবং এর সমস্ত ফলাফল ডেটাবেস থেকে সফলভাবে মুছে ফেলা হয়েছে!`);
     }
 
     function openAddTeacherModal() {
@@ -1534,7 +1578,6 @@
       renderAdminTeacherTable();
     }
 
-    // --- CLASSES & SECTIONS ADMIN ---
     function renderClassListAdmin() {
       const ul = document.getElementById('classListGroup');
       ul.innerHTML = db.classes.map((c, i) => `
@@ -1583,12 +1626,18 @@
       const year = document.getElementById('adminExamYear').value.trim();
       if (!name) return;
 
+      if (db.officialExams.some(e => e.name === name)) {
+        alert('এই নামের পরীক্ষাটি ইতিমধ্যে তালিকায় বিদ্যমান!');
+        return;
+      }
+
       db.officialExams.push({ name, year });
       saveDB(db);
-      alert('নতুন পরীক্ষা চালু করা হয়েছে!');
+      document.getElementById('adminExamName').value = '';
+      renderAdminExamTable();
+      alert('নতুন পরীক্ষা সফলভাবে চালু করা হয়েছে!');
     }
 
-    // --- PROFILE & PASSWORD UPDATE ---
     function handleProfileUpdate(e) {
       e.preventDefault();
       const imgUrl = document.getElementById('profImgUrl').value.trim();
@@ -1638,9 +1687,10 @@
       return { gpa: 0.0, letter: 'F' };
     }
 
-    // --- PUBLIC RESULTS SEARCH ---
     function initResultsDropdowns() {
       populateClassDropdown('resClass');
+      const resExamSel = document.getElementById('resExam');
+      resExamSel.innerHTML = db.officialExams.map(e => `<option value="${e.name}">${e.name}</option>`).join('');
     }
 
     function handlePublicExamChange() {
