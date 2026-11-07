@@ -83,7 +83,7 @@
       </div>
     </section>
 
-    <!-- TEACHERS PUBLIC SECTION (WITH SCHOOL & COLLEGE FILTER TABS) -->
+    <!-- TEACHERS PUBLIC SECTION -->
     <section id="sec-teachers" class="hidden space-y-6">
       <div class="bg-white p-6 rounded-xl shadow space-y-4">
         <div class="flex flex-col md:flex-row md:items-center justify-between border-b pb-3 gap-3">
@@ -91,7 +91,6 @@
             <h2 class="text-xl font-bold text-gray-800"><i class="fa-solid fa-chalkboard-user text-blue-800 mr-2"></i>আমাদের সম্মানিত শিক্ষকবৃন্দ</h2>
             <p class="text-xs text-gray-500">প্রতিষ্ঠানটির বিদ্যালয় ও কলেজ শাখার অভিজ্ঞ শিক্ষকগণের পরিচিতি।</p>
           </div>
-          <!-- Section Selector Tabs -->
           <div class="flex bg-gray-100 p-1 rounded-lg border">
             <button onclick="filterPublicTeachers('school')" id="btnTeacherSchool" class="px-4 py-1.5 text-xs font-bold rounded-md bg-blue-800 text-white shadow">স্কুল সেকশন</button>
             <button onclick="filterPublicTeachers('college')" id="btnTeacherCollege" class="px-4 py-1.5 text-xs font-bold rounded-md text-gray-600 hover:text-gray-900">কলেজ সেকশন</button>
@@ -169,19 +168,19 @@
       </div>
     </section>
 
-    <!-- LOGIN SECTION -->
+    <!-- SECURE LOGIN SECTION (NO DEMO CREDENTIALS DISPLAYED) -->
     <section id="sec-login" class="hidden max-w-md mx-auto my-10">
       <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
         <div class="text-center mb-6">
           <i class="fa-solid fa-user-lock text-4xl text-blue-800 mb-2"></i>
           <h2 class="text-2xl font-bold text-gray-800">প্যানেল লগইন</h2>
-          <p class="text-xs text-gray-500 mt-1">শিক্ষক ও এডমিনের জন্য সংরক্ষিত এলাকা</p>
+          <p class="text-xs text-gray-500 mt-1">শিক্ষক ও এডমিনের জন্য সংরক্ষিত সুরক্ষিত এলাকা</p>
         </div>
 
         <form onsubmit="handleLogin(event)" class="space-y-4">
           <div>
-            <label class="block text-xs font-bold text-gray-700 mb-1">ইমেইল / আইডি</label>
-            <input type="email" id="loginEmail" required class="w-full border rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-blue-600 outline-none" placeholder="example@bhaulaganj.edu">
+            <label class="block text-xs font-bold text-gray-700 mb-1">ইমেইল আইডি</label>
+            <input type="email" id="loginEmail" required class="w-full border rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-blue-600 outline-none" placeholder="your.email@bhaulaganj.edu">
           </div>
           <div>
             <label class="block text-xs font-bold text-gray-700 mb-1">পাসওয়ার্ড</label>
@@ -195,21 +194,13 @@
           <button type="submit" class="w-full bg-blue-800 text-white font-bold py-2.5 rounded-lg hover:bg-blue-900 shadow-md">লগইন করুন</button>
         </form>
 
-        <div class="mt-6 p-3 bg-gray-50 rounded-lg text-xs text-gray-600 border space-y-1">
-          <p class="font-bold text-gray-700 mb-1"><i class="fa-solid fa-key mr-1"></i> ডেমো লগইন অ্যাকাউন্টের বিবরণ:</p>
-          <div class="flex justify-between items-center bg-white p-1.5 rounded border">
-            <span>এডমিন: <code>admin@bhaulaganj.edu</code></span>
-            <button onclick="fillLogin('admin@bhaulaganj.edu','admin123')" class="text-blue-600 font-bold text-xs hover:underline">অটো-ফিল</button>
-          </div>
-          <div class="flex justify-between items-center bg-white p-1.5 rounded border">
-            <span>শিক্ষক: <code>teacher@bhaulaganj.edu</code></span>
-            <button onclick="fillLogin('teacher@bhaulaganj.edu','teacher123')" class="text-blue-600 font-bold text-xs hover:underline">অটো-ফিল</button>
-          </div>
+        <div class="mt-6 p-3 bg-yellow-50 rounded-lg text-xs text-yellow-800 border border-yellow-200 text-center">
+          <p><i class="fa-solid fa-shield-halved mr-1"></i> নিরাপত্তার স্বার্থে ডেমো পাসওয়ার্ড বা তথ্য এখানে প্রদর্শন করা হয়নি। নির্ধারিত এডমিন একাউন্ট দিয়ে প্রবেশ করুন।</p>
         </div>
       </div>
     </section>
 
-    <!-- DASHBOARD SECTION -->
+    <!-- SECURED DASHBOARD SECTION -->
     <section id="sec-dashboard" class="hidden space-y-6">
       
       <!-- Top Profile Banner -->
@@ -568,7 +559,7 @@
     </div>
   </div>
 
-  <!-- MODAL: ADD / EDIT TEACHER (ADMIN) WITH COLLEGE SECTION CHECKBOX -->
+  <!-- MODAL: ADD / EDIT TEACHER (ADMIN) -->
   <div id="modalTeacher" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center p-4 z-50">
     <div class="bg-white rounded-xl shadow-xl max-w-xl w-full p-6 space-y-4">
       <div class="flex justify-between items-center border-b pb-2">
@@ -603,11 +594,10 @@
           <input type="text" id="tImage" class="w-full border rounded p-2 text-sm" placeholder="https://...">
         </div>
 
-        <!-- NEW: COLLEGE SECTION CHECKBOX -->
         <div class="bg-indigo-50 p-3 rounded-lg border border-indigo-200">
           <label class="flex items-center space-x-2 space-x-reverse text-xs font-bold text-indigo-900 cursor-pointer">
             <input type="checkbox" id="tIsCollege" class="w-4 h-4 text-indigo-600 rounded">
-            <span>তিনি কি কলেজ সেকশনের শিক্ষক? (চেক না দিলে স্বয়ংক্রিয়ভাবে 'স্কুল সেকশন' ধরা হবে)</span>
+            <span>তিনি কি কলেজ সেকশনের শিক্ষক? (চেক না দিলে স্কুল সেকশন ধরা হবে)</span>
           </label>
         </div>
 
@@ -700,16 +690,17 @@
     </div>
   </footer>
 
-  <!-- JAVASCRIPT LOGIC -->
+  <!-- JAVASCRIPT LOGIC (SECURED SESSION) -->
   <script>
-    const DB_KEY = 'BHAULAGANJ_SCHOOL_DB_V8';
+    const DB_KEY = 'BHAULAGANJ_SCHOOL_DB_V9';
+    const SESSION_KEY = 'BHAULAGANJ_CURRENT_USER';
 
     const defaultData = {
       users: [
         { 
           name: "প্রধান শিক্ষক (এডমিন)", 
           email: "admin@bhaulaganj.edu", 
-          pass: "admin123", 
+          pass: "Admin@2026Secure", 
           role: "admin", 
           department: "প্রধান শিক্ষক",
           image: "https://images.unsplash.com/photo-1544717305-2782549b5136?w=300",
@@ -719,7 +710,7 @@
         { 
           name: "নুরজামান স্যার", 
           email: "teacher@bhaulaganj.edu", 
-          pass: "teacher123", 
+          pass: "Teacher@2026", 
           role: "teacher", 
           department: "সহকারী শিক্ষক - গণিত ও বিজ্ঞান",
           image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300",
@@ -728,16 +719,6 @@
             { class: "৬ষ্ঠ", section: "ক", subject: "গণিত" },
             { class: "৭ম", section: "ক", subject: "বিজ্ঞান" }
           ]
-        },
-        {
-          name: "ড. রফিকুল ইসলাম",
-          email: "lecturer@bhaulaganj.edu",
-          pass: "college123",
-          role: "teacher",
-          department: "প্রভাষক - রসায়ন (কলেজ সেকশন)",
-          image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300",
-          isCollege: true,
-          rules: []
         }
       ],
       classes: [
@@ -786,7 +767,27 @@
     let db = getDB();
     let currentUser = null;
 
+    // Secure Session Check on Load
+    function checkExistingSession() {
+      const sessionData = sessionStorage.getItem(SESSION_KEY);
+      if (sessionData) {
+        const userEmail = JSON.parse(sessionData);
+        const validUser = db.users.find(u => u.email === userEmail);
+        if (validUser) {
+          currentUser = validUser;
+          updateNavForAuth();
+        }
+      }
+    }
+
     function showSection(secId) {
+      // Prevent unauthorized access to dashboard
+      if (secId === 'dashboard' && !currentUser) {
+        alert('অনুগ্রহ করে প্রথমে লগইন করুন!');
+        showSection('login');
+        return;
+      }
+
       ['home', 'teachers', 'notices', 'results', 'login', 'dashboard'].forEach(s => {
         document.getElementById(`sec-${s}`).classList.add('hidden');
       });
@@ -796,6 +797,7 @@
       if (secId === 'teachers') filterPublicTeachers('school');
       if (secId === 'notices') renderFullNotices();
       if (secId === 'results') initResultsDropdowns();
+      if (secId === 'dashboard') showDashboardContent();
     }
 
     function togglePassVisibility(inputId) {
@@ -803,7 +805,7 @@
       input.type = input.type === 'password' ? 'text' : 'password';
     }
 
-    // --- PUBLIC TEACHERS TAB FILTERING (SCHOOL & COLLEGE) ---
+    // --- PUBLIC TEACHERS TAB FILTERING ---
     function filterPublicTeachers(secType) {
       currentTeacherPublicTab = secType;
       
@@ -862,24 +864,24 @@
       `).join('');
     }
 
+    // --- SECURE AUTHENTICATION ---
     function handleLogin(e) {
       e.preventDefault();
       const email = document.getElementById('loginEmail').value.trim();
       const pass = document.getElementById('loginPass').value.trim();
 
+      db = getDB(); // Refresh DB
       const user = db.users.find(u => u.email === email && u.pass === pass);
       if (user) {
         currentUser = user;
+        sessionStorage.setItem(SESSION_KEY, JSON.stringify(user.email));
         updateNavForAuth();
-        showDashboard();
+        showSection('dashboard');
+        document.getElementById('loginEmail').value = '';
+        document.getElementById('loginPass').value = '';
       } else {
         alert('ইমেইল বা পাসওয়ার্ড ভুল হয়েছে!');
       }
-    }
-
-    function fillLogin(email, pass) {
-      document.getElementById('loginEmail').value = email;
-      document.getElementById('loginPass').value = pass;
     }
 
     function updateNavForAuth() {
@@ -899,12 +901,17 @@
 
     function handleLogout() {
       currentUser = null;
+      sessionStorage.removeItem(SESSION_KEY);
       updateNavForAuth();
       showSection('home');
+      alert('সফলভাবে লগআউট করা হয়েছে!');
     }
 
-    function showDashboard() {
-      showSection('dashboard');
+    function showDashboardContent() {
+      if (!currentUser) {
+        showSection('login');
+        return;
+      }
       document.getElementById('dashUserName').innerText = currentUser.name;
       document.getElementById('dashUserEmail').innerText = currentUser.email;
       document.getElementById('dashRoleBadge').innerText = currentUser.role === 'admin' ? 'এডমিন ড্যাশবোর্ড' : 'শিক্ষক প্যানেল';
@@ -920,6 +927,11 @@
     }
 
     function switchDashTab(tabName) {
+      if (!currentUser) {
+        showSection('login');
+        return;
+      }
+
       ['students', 'marks', 'classTests', 'adminControl', 'password'].forEach(t => {
         const btn = document.getElementById(`tab-${t}`);
         const content = document.getElementById(`dash-content-${t}`);
@@ -1758,6 +1770,7 @@
     }
 
     window.onload = function() {
+      checkExistingSession();
       renderHomeNotices();
     };
   </script>
